@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us | Smart Business Resilience</title>
+
+  <meta name="description" content="Contact Smart Business Resilience to discuss electrical, mechanical, public health, lighting and sustainability engineering services.">
+
+  <meta name="theme-color" content="#080808">
+
+  <style>
+    :root {
+      --black: #080808;
+      --dark: #111111;
+      --card: #171717;
+      --pink: #ff2f92;
+      --white: #ffffff;
+      --muted: #bdbdbd;
+      --border: rgba(255,255,255,0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: rgba(8,8,8,0.96);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .logo span {
+      color: var(--pink);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 17px;
+    }
+
+    nav a {
+      color: #dddddd;
+      font-size: 13px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--pink);
+    }
+
+    .hero {
+      padding: 90px 0 75px;
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(255,47,146,0.14),
+          transparent 35%
+        ),
+        linear-gradient(135deg, #080808, #151015);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      color: var(--pink);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 66px);
+      line-height: 1.12;
+      max-width: 800px;
+      margin-bottom: 22px;
+    }
+
+    h1 span,
+    h2 span {
+      color: var(--pink);
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 650px;
+      font-size: 17px;
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .contact-info,
+    .contact-form {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .contact-info > p,
+    .contact-form > p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .info-item {
+      padding: 19px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .info-item h4 {
+      color: var(--pink);
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .info-item p,
+    .info-item a {
+      color: #e4e4e4;
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .info-item a:hover {
+      color: var(--pink);
+    }
+
+    .form-group {
+      margin-bottom: 19px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #393939;
+      border-radius: 8px;
+      background: #0d0d0d;
+      color: var(--white);
+      font: inherit;
+      font-size: 14px;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--pink);
+    }
+
+    select option {
+      background: #111111;
+      color: white;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .btn {
+      display: inline-block;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 23px;
+      background: var(--pink);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .btn:hover {
+      background: #e51e7d;
+      transform: translateY(-2px);
+    }
+
+    .form-note {
+      margin-top: 13px;
+      color: #a9a9a9;
+      font-size: 12px;
+    }
+
+    .services-section {
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .service-card {
+      background: var(--card);
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .service-card:hover {
+      border-color: var(--pink);
+      transform: translateY(-4px);
+    }
+
+    .service-card h3 {
+      font-size: 17px;
+      margin-bottom: 9px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 70px 25px;
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(255,47,146,0.13),
+          transparent 65%
+        );
+    }
+
+    .cta h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 25px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      background: #050505;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner p {
+      color: #a8a8a8;
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #cfcfcf;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover {
+      color: var(--pink);
+    }
+
+    @media (max-width: 850px) {
+      .navbar {
+        padding: 17px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero {
+        padding: 65px 0;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .contact-info,
+      .contact-form {
+        padding: 23px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container navbar">
+
+      <a href="../index.html" class="logo">
+        SMART BUSINESS<br>
+        <span>RESILIENCE.</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="approach.html">Our Approach</a>
+        <a href="sustainability.html">Sustainability</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+
+        <p class="eyebrow">Get in touch</p>
+
+        <h1>
+          Let's discuss your next
+          <span>engineering project.</span>
+        </h1>
+
+        <p>
+          Contact Smart Business Resilience to discuss your requirements,
+          explore our engineering services and find out how we may be able
+          to support your project.
+        </p>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Contact our team</p>
+
+          <h2>
+            How can we <span>help you?</span>
+          </h2>
+
+          <p>
+            Tell us a little about your project or enquiry. You can contact
+            us directly by email or use the enquiry form to prepare a message.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+
+          <div class="contact-info">
+
+            <h3>Contact information</h3>
+
+            <p>
+              We welcome enquiries about our engineering disciplines,
+              project requirements and potential collaboration.
+            </p>
+
+            <div class="info-item">
+              <h4>Email</h4>
+
+              <a href="mailto:info@smartbusinessresilience.co.uk">
+                info@smartbusinessresilience.co.uk
+              </a>
+            </div>
+
+            <div class="info-item">
+              <h4>Engineering services</h4>
+
+              <p>
+                Electrical, Mechanical, Public Health, Lighting and
+                Sustainability Engineering.
+              </p>
+            </div>
+
+            <div class="info-item">
+              <h4>Enquiries</h4>
+
+              <p>
+                Share your project requirements, questions or collaboration
+                ideas with us.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="contact-form">
+
+            <h3>Send an enquiry</h3>
+
+            <p>
+              Complete the form below. Your email application will open
+              with your message ready to send.
+            </p>
+
+            <form id="contactForm">
+
+              <div class="form-group">
+                <label for="name">Full name *</label>
+
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email address *</label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email address"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="company">Company name</label>
+
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Enter your company name"
+                  autocomplete="organization"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service of interest *</label>
+
+                <select id="service" name="service" required>
+                  <option value="">Choose a service</option>
+                  <option>Electrical Engineering</option>
+                  <option>Mechanical Engineering</option>
+                  <option>Public Health Engineering</option>
+                  <option>Lighting</option>
+                  <option>Sustainability</option>
+                  <option>Integrated Engineering</option>
+                  <option>General Enquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your message *</label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us about your project or enquiry..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn">
+                Prepare Email →
+              </button>
+
+              <p class="form-note">
+                This form opens your email application. It does not
+                automatically send or store your message.
+              </p>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="services-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Our disciplines</p>
+
+          <h2>
+            Engineering services for
+            <span>your requirements.</span>
+          </h2>
+
+          <p>
+            Select the area most relevant to your enquiry.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <div class="service-card">
+            <h3>Electrical Engineering</h3>
+            <p>
+              Electrical building systems, infrastructure and coordinated
+              engineering considerations.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>Mechanical Engineering</h3>
+            <p>
+              Mechanical building services and system coordination.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>Public Health Engineering</h3>
+            <p>
+              Building water services, drainage and public health systems.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>Lighting</h3>
+            <p>
+              Lighting design considerations, performance and integration.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>Sustainability</h3>
+            <p>
+              Energy efficiency, environmental considerations and
+              sustainable building performance.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>Integrated Engineering</h3>
+            <p>
+              Coordinating building services to support effective
+              project integration.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+
+        <p class="eyebrow">Start a conversation</p>
+
+        <h2>Have a project in mind?</h2>
+
+        <p>
+          Get in touch by email to discuss your engineering requirements
+          and the next steps for your enquiry.
+        </p>
+
+        <a
+          class="btn"
+          href="mailto:info@smartbusinessresilience.co.uk?subject=Engineering%20Project%20Enquiry"
+        >
+          Email Our Team →
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+
+      <p>
+        © <span id="year"></span> Smart Business Resilience.
+        All rights reserved.
+      </p>
+
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="sustainability.html">Sustainability</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("contactForm").addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const company = document.getElementById("company").value.trim();
+        const service = document.getElementById("service").value;
+        const message = document.getElementById("message").value.trim();
+
+        const subject = encodeURIComponent(
+          "Website Enquiry: " + service
+        );
+
+        const body = encodeURIComponent(
+          "Hello Smart Business Resilience,\n\n" +
+          "Name: " + name + "\n" +
+          "Email: " + email + "\n" +
+          "Company: " + (company || "Not provided") + "\n" +
+          "Service of interest: " + service + "\n\n" +
+          "Message:\n" + message + "\n\n" +
+          "Kind regards,\n" + name
+        );
+
+        window.location.href =
+          "mailto:info@smartbusinessresilience.co.uk" +
+          "?subject=" + subject +
+          "&body=" + body;
+
+      }
+    );
+  </script>
+
+</body>
+            </html>
