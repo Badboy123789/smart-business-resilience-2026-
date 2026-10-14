@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Smart Business Resilience | Engineering Solutions</title>
+
+  <meta name="description" content="Smart Business Resilience delivers engineering-focused solutions across electrical, mechanical, public health, lighting and sustainability disciplines.">
+
+  <meta name="theme-color" content="#080808">
+
+  <style>
+    /* =========================
+       GLOBAL SETTINGS
+    ========================= */
+
+    :root {
+      --black: #080808;
+      --dark: #0d0d12;
+      --pink: #ff1688;
+      --pink-light: #ff4ba5;
+      --white: #ffffff;
+      --muted: #c2c2cc;
+      --border: rgba(255,255,255,0.13);
+      --container: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(90%, var(--container));
+      margin: auto;
+    }
+
+    .pink {
+      color: var(--pink);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--pink);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.15;
+      letter-spacing: -0.7px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 23px;
+      background: linear-gradient(110deg, var(--pink), #ff0080);
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid var(--pink);
+      border-radius: 7px;
+      transition: transform .25s ease, box-shadow .25s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 35px rgba(255,22,136,.25);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--pink);
+    }
+
+    .btn-outline:hover {
+      background: var(--pink);
+    }
+
+    /* =========================
+       HEADER AND NAVIGATION
+    ========================= */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8,8,8,.94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border: 3px solid var(--pink);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-size: 16px;
+      font-weight: 900;
+      color: white;
+      box-shadow: 0 0 20px rgba(255,22,136,.12);
+    }
+
+    .brand-name {
+      font-size: 12px;
+      line-height: 1.4;
+      letter-spacing: 1.3px;
+      font-weight: 800;
+    }
+
+    .brand-name span {
+      display: block;
+      color: var(--pink);
+      letter-spacing: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 600;
+      color: #e5e5eb;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--pink);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      color: white;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      position: relative;
+      min-height: 640px;
+      padding: 110px 0;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 90% 20%, rgba(255,22,136,.16), transparent 38%),
+        radial-gradient(ellipse at 0% 90%, rgba(255,22,136,.09), transparent 35%),
+        linear-gradient(120deg, #080808, #101019 60%, #080808);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      border: 1px solid rgba(255,22,136,.18);
+      transform: rotate(35deg);
+      right: -180px;
+      top: 70px;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border: 1px solid rgba(255,22,136,.10);
+      transform: rotate(35deg);
+      right: -110px;
+      top: 135px;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+    }
+
+    .hero h1 {
+      font-size: clamp(43px, 7vw, 78px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+      letter-spacing: -2.5px;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--pink);
+    }
+
+    .hero-description {
+      font-size: 17px;
+      max-width: 610px;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 10px 15px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.025);
+      border-radius: 30px;
+      font-size: 12px;
+      margin-bottom: 25px;
+      color: #eeeeee;
+    }
+
+    .hero-badge span {
+      width: 8px;
+      height: 8px;
+      background: var(--pink);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--pink);
+    }
+
+    /* =========================
+       INTRODUCTION
+    ========================= */
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .intro-copy p {
+      margin-bottom: 17px;
+    }
+
+    .intro-panel {
+      min-height: 330px;
+      padding: 38px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(255,22,136,.16), transparent 45%),
+        #0c0c11;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .intro-panel::after {
+      content: "SBR";
+      position: absolute;
+      right: 10px;
+      bottom: -55px;
+      font-size: 180px;
+      line-height: 1;
+      font-weight: 900;
+      color: rgba(255,22,136,.055);
+    }
+
+    .intro-panel h3 {
+      font-size: 25px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro-list {
+      list-style: none;
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      color: #eeeeee;
+    }
+
+    .intro-list li::before {
+      content: "✦";
+      color: var(--pink);
+      margin-right: 12px;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+
+    .section-heading p {
+      max-width: 610px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: linear-gradient(145deg, #111116, #09090c);
+      transition: transform .3s, border-color .3s, box-shadow .3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--pink);
+      transition: width .35s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(255,22,136,.65);
+      box-shadow: 0 18px 45px rgba(0,0,0,.28);
+    }
+
+    .service-card:hover::before {
+      width: 100%;
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      border: 1px solid rgba(255,22,136,.35);
+      background: rgba(255,22,136,.08);
+      color: var(--pink);
+      font-size: 25px;
+      margin-bottom: 23px;
+    }
+
+    .service-card h3 {
+      font-size: 21px;
+      margin-bottom: 13px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      margin-bottom: 23px;
+    }
+
+    .text-link {
+      color: var(--pink);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .text-link:hover {
+      color: white;
+    }
+
+    /* =========================
+       APPROACH
+    ========================= */
+
+    .approach {
+      background:
+        radial-gradient(ellipse at 0% 100%, rgba(255,22,136,.09), transparent 40%),
+        #0b0b0f;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 65px;
+      align-items: start;
+    }
+
+    .approach-copy p {
+      margin-bottom: 20px;
+    }
+
+    .principles {
+      display: grid;
+      gap: 15px;
+    }
+
+    .principle {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 22px;
+      background: #111116;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: border-color .25s, transform .25s;
+    }
+
+    .principle:hover {
+      border-color: var(--pink);
+      transform: translateX(5px);
+    }
+
+    .principle-icon {
+      color: var(--pink);
+      font-size: 25px;
+      line-height: 1.2;
+    }
+
+    .principle h3 {
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    .principle p {
+      font-size: 13px;
+    }
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      min-height: 250px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background:
+        linear-gradient(0deg, rgba(8,8,8,.98), rgba(8,8,8,.25)),
+        radial-gradient(circle at 80% 10%, rgba(255,22,136,.20), transparent 45%),
+        #101016;
+      transition: border-color .25s, transform .25s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--pink);
+    }
+
+    .project-number {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--pink);
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 14px;
+    }
+
+    .projects-note {
+      font-size: 12px;
+      margin-top: 22px;
+    }
+
+    /* =========================
+       VALUES
+    ========================= */
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .value-card {
+      padding: 25px 20px;
+      border-left: 2px solid var(--pink);
+      background: #101014;
+    }
+
+    .value-card h3 {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .value-card p {
+      font-size: 13px;
+    }
+
+    /* =========================
+       CONTACT CTA
+    ========================= */
+
+    .contact-cta {
+      padding: 75px 0;
+      background:
+        radial-gradient(circle at 90% 0%, rgba(255,255,255,.12), transparent 30%),
+        linear-gradient(110deg, #d9006c, #ff1688 60%, #d9006c);
+      border: none;
+    }
+
+    .contact-cta-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .contact-cta h2 {
+      font-size: clamp(30px, 4vw, 45px);
+      margin-bottom: 12px;
+    }
+
+    .contact-cta p {
+      color: white;
+      max-width: 620px;
+    }
+
+    .contact-cta .btn {
+      background: var(--black);
+      border-color: var(--black);
+      flex-shrink: 0;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+      padding: 65px 0 25px;
+      background: #060608;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr;
+      gap: 45px;
+      padding-bottom: 40px;
+    }
+
+    .footer-about p {
+      font-size: 13px;
+      margin-top: 20px;
+      max-width: 340px;
+    }
+
+    .footer h3 {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin: 9px 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--pink);
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* =========================
+       ANIMATIONS
+    ========================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-content {
+      animation: heroEnter .9s ease both;
+    }
+
+    @keyframes heroEnter {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        box-shadow: 0 0 10px rgba(255,22,136,.1);
+      }
+      50% {
+        box-shadow: 0 0 25px rgba(255,22,136,.25);
+      }
+    }
+
+    .brand-mark {
+      animation: glow 4s ease-in-out infinite;
+    }
+
+    /* =========================
+       RESPONSIVE DESIGN
+    ========================= */
+
+    @media (max-width: 950px) {
+      .navbar {
+        flex-wrap: wrap;
+        padding: 15px 0;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .intro-grid,
+      .approach-grid {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      html {
+        scroll-padding-top: 75px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .navbar {
+        min-height: 72px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 13px 10px;
+        border-bottom: 1px solid var(--border);
+        font-size: 14px;
+      }
+
+      .nav-links .nav-contact {
+        margin-top: 10px;
+        text-align: center;
+        border: 1px solid var(--pink);
+        border-radius: 6px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 90px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(42px, 12vw, 64px);
+        letter-spacing: -1.5px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .intro-grid,
+      .approach-grid,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-panel {
+        min-height: 300px;
+        padding: 28px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        padding: 27px;
+      }
+
+      .contact-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .contact-cta .btn {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .project-card {
+        min-height: 220px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .brand-name {
+        font-size: 10px;
+      }
+
+      .brand-mark {
+        width: 40px;
+        height: 40px;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container navbar">
+
+      <a href="#home" class="brand" aria-label="Smart Business Resilience home">
+        <div class="brand-mark">SBR</div>
+        <div class="brand-name">
+          SMART BUSINESS
+          <span>RESILIENCE</span>
+        </div>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="pages/about.html">About</a>
+        <a href="pages/services.html">Services</a>
+        <a href="pages/projects.html">Projects</a>
+        <a href="pages/contact.html">Contact</a>
+        <a href="pages/contact.html" class="nav-contact">Contact Us ↗</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="hero-badge">
+            <span></span>
+            ENGINEERING A STRONGER TOMORROW
+          </div>
+
+          <h1>
+            Smart Engineering.
+            <span>Lasting Resilience.</span>
+          </h1>
+
+          <p class="hero-description">
+            Smart Business Resilience (SBR) is an engineering-focused
+            company working across electrical, mechanical, public health,
+            lighting and sustainability to support smarter, more efficient
+            and resilient environments.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#services" class="btn">
+              Explore Our Services <span>→</span>
+            </a>
+
+            <a href="#projects" class="btn btn-outline">
+              Discover Our Work <span>↗</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section id="about">
+      <div class="container intro-grid">
+
+        <div class="intro-copy reveal">
+          <span class="eyebrow">ABOUT SBR</span>
+
+          <h2>
+            Engineering at the Heart of
+            <span class="pink">What We Do.</span>
+          </h2>
+
+          <p>
+            Smart Business Resilience focuses on engineering disciplines
+            that help buildings and infrastructure operate effectively.
+            Our approach brings together technical thinking, practical
+            solutions and consideration for long-term performance.
+          </p>
+
+          <p>
+            We recognise the importance of coordinated engineering,
+            responsible resource use and solutions that respond to
+            the needs of each project.
+          </p>
+
+          <a href="pages/about.html" class="btn">
+            Learn More About Us →
+          </a>
+        </div>
+
+        <div class="intro-panel reveal">
+          <span class="eyebrow">OUR APPROACH</span>
+
+          <h3>
+            Better Systems.
+            <span class="pink">Stronger Futures.</span>
+          </h3>
+
+          <ul class="intro-list">
+            <li>Engineering-led thinking</li>
+            <li>Integrated technical disciplines</li>
+            <li>Practical, considered solutions</li>
+            <li>Long-term performance in focus</li>
+            <li>Responsible sustainability principles</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">WHAT WE DO</span>
+
+          <h2>
+            Our <span class="pink">Engineering Services</span>
+          </h2>
+
+          <p>
+            We focus on essential engineering disciplines that contribute
+            to building services, infrastructure performance, comfort
+            and environmental responsibility.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card reveal">
+            <div class="service-icon">ϟ</div>
+
+            <h3>Electrical Engineering</h3>
+
+            <p>
+              Electrical engineering considerations supporting safe,
+              efficient and dependable building systems.
+            </p>
+
+            <a class="text-link" href="pages/services.html#electrical">
+              Explore Service →
+            </a>
+          </article>
+
+
+          <article class="service-card reveal">
+            <div class="service-icon">⚙</div>
+
+            <h3>Mechanical Engineering</h3>
+
+            <p>
+              Mechanical building systems focused on performance,
+              functionality, comfort and operational efficiency.
+            </p>
+
+            <a class="text-link" href="pages/services.html#mechanical">
+              Explore Service →
+            </a>
+          </article>
+
+
+          <article class="service-card reveal">
+            <div class="service-icon">◉</div>
+
+            <h3>Public Health Engineering</h3>
+
+            <p>
+              Building water services, drainage considerations and
+              systems that support healthy environments.
+            </p>
+
+            <a class="text-link" href="pages/services.html#public-health">
+              Explore Service →
+            </a>
+          </article>
+
+
+          <article class="service-card reveal">
+            <div class="service-icon">☼</div>
+
+            <h3>Lighting Solutions</h3>
+
+            <p>
+              Lighting design considerations that support visual comfort,
+              practical use of spaces and energy awareness.
+            </p>
+
+            <a class="text-link" href="pages/services.html#lighting">
+              Explore Service →
+            </a>
+          </article>
+
+
+          <article class="service-card reveal">
+            <div class="service-icon">♧</div>
+
+            <h3>Sustainability</h3>
+
+            <p>
+              Sustainability-focused thinking that considers resource
+              efficiency, environmental impact and long-term value.
+            </p>
+
+            <a class="text-link" href="pages/services.html#sustainability">
+              Explore Service →
+            </a>
+          </article>
+
+
+          <article class="service-card reveal">
+            <div class="service-icon">⌘</div>
+
+            <h3>Integrated Engineering</h3>
+
+            <p>
+              Coordinated consideration of building services to support
+              compatibility across different engineering disciplines.
+            </p>
+
+            <a class="text-link" href="pages/services.html">
+              Explore Service →
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- OUR APPROACH -->
+    <section class="approach" id="approach">
+      <div class="container approach-grid">
+
+        <div class="approach-copy reveal">
+          <span class="eyebrow">WHY SBR</span>
+
+          <h2>
+            A More Considered
+            <span class="pink">Engineering Approach.</span>
+          </h2>
+
+          <p>
+            Engineering decisions can influence how buildings function,
+            how people experience their surroundings and how resources
+            are used over time.
+          </p>
+
+          <p>
+            SBR's engineering-focused approach considers practical needs,
+            coordination between disciplines and the value of
+            responsible long-term thinking.
+          </p>
+
+          <a href="pages/about.html" class="btn btn-outline">
+            Discover Our Approach →
+          </a>
+        </div>
+
+        <div class="principles">
+
+          <article class="principle reveal">
+            <div class="principle-icon">✧</div>
+
+            <div>
+              <h3>Technical Thinking</h3>
+              <p>
+                Considering engineering requirements and the needs
+                of each project.
+              </p>
+            </div>
+          </article>
+
+          <article class="principle reveal">
+            <div class="principle-icon">◇</div>
+
+            <div>
+              <h3>Practical Solutions</h3>
+              <p>
+                Keeping functionality, usability and building
+                performance in focus.
+              </p>
+            </div>
+          </article>
+
+          <article class="principle reveal">
+            <div class="principle-icon">♧</div>
+
+            <div>
+              <h3>Sustainable Thinking</h3>
+              <p>
+                Recognising the importance of resource efficiency
+                and environmental responsibility.
+              </p>
+            </div>
+          </article>
+
+          <article class="principle reveal">
+            <div class="principle-icon">◎</div>
+
+            <div>
+              <h3>Integrated Disciplines</h3>
+              <p>
+                Considering how different building engineering
+                systems work together.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">ENGINEERING IN FOCUS</span>
+
+          <h2>
+            Our <span class="pink">Projects</span>
+          </h2>
+
+          <p>
+            Explore our project information to understand more about
+            the engineering disciplines and solutions associated
+            with our work.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card reveal">
+            <div class="project-number">01 / ELECTRICAL</div>
+
+            <h3>Electrical Systems</h3>
+
+            <p>
+              Engineering considerations for dependable electrical
+              services and building functionality.
+            </p>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-number">02 / MECHANICAL</div>
+
+            <h3>Mechanical Systems</h3>
+
+            <p>
+              Mechanical engineering considerations for building
+              comfort and system performance.
+            </p>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-number">03 / PUBLIC HEALTH</div>
+
+            <h3>Public Health Services</h3>
+
+            <p>
+              Building water and drainage services considered
+              as part of the wider engineering environment.
+            </p>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-number">04 / SUSTAINABILITY</div>
+
+            <h3>Sustainable Environments</h3>
+
+            <p>
+              Engineering thinking that considers energy use,
+              resources and long-term environmental impact.
+            </p>
+          </article>
+
+        </div>
+
+        <p class="projects-note">
+          These cards describe engineering disciplines, not verified
+          completed projects. Contact SBR for project-specific information.
+        </p>
+
+        <div style="margin-top:30px;">
+          <a href="pages/projects.html" class="btn btn-outline">
+            Visit Projects Page →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- VALUES -->
+    <section id="values">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">OUR PRINCIPLES</span>
+
+          <h2>
+            What Guides <span class="pink">Our Thinking</span>
+          </h2>
+
+          <p>
+            The principles that shape our engineering-focused
+            perspective and approach to the built environment.
+          </p>
+        </div>
+
+        <div class="values-grid">
+
+          <article class="value-card reveal">
+            <h3>Expertise</h3>
+            <p>
+              Attention to the requirements of different
+              engineering disciplines.
+            </p>
+          </article>
+
+          <article class="value-card reveal">
+            <h3>Practicality</h3>
+            <p>
+              Keeping real-world needs and building functionality
+              at the centre of the process.
+            </p>
+          </article>
+
+          <article class="value-card reveal">
+            <h3>Responsibility</h3>
+            <p>
+              Considering environmental impact and the efficient
+              use of resources.
+            </p>
+          </article>
+
+          <article class="value-card reveal">
+            <h3>Coordination</h3>
+            <p>
+              Recognising how different engineering systems
+              interact within buildings.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACT CALL TO ACTION -->
+    <section class="contact-cta" id="contact">
+      <div class="container contact-cta-inner">
+
+        <div class="reveal">
+          <span class="eyebrow" style="color:white;">
+            LET'S CONNECT
+          </span>
+
+          <h2>Let's Build a More<br>Resilient Future.</h2>
+
+          <p>
+            Have an engineering enquiry or want to learn more about
+            Smart Business Resilience? Get in touch with our team.
+          </p>
+        </div>
+
+        <a
+          href="pages/contact.html"
+          class="btn"
+        >
+          Contact SBR <span>↗</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="#home" class="brand">
+            <div class="brand-mark">SBR</div>
+
+            <div class="brand-name">
+              SMART BUSINESS
+              <span>RESILIENCE</span>
+            </div>
+          </a>
+
+          <p>
+            Engineering-focused thinking across electrical,
+            mechanical, public health, lighting and sustainability
+            disciplines.
+          </p>
+        </div>
+
+
+        <div>
+          <h3>Quick Links</h3>
+
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/projects.html">Projects</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+
+        <div>
+          <h3>Contact Us</h3>
+
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:info@smartbusinessresilience.co.uk">
+                ✉ info@smartbusinessresilience.co.uk
+              </a>
+            </li>
+
+            <li>Electrical Engineering</li>
+            <li>Mechanical Engineering</li>
+            <li>Public Health Engineering</li>
+            <li>Lighting & Sustainability</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © <span id="year">2026</span>
+          Smart Business Resilience (SBR). All rights reserved.
+        </p>
+
+        <p>Smart Engineering. Lasting Resilience.</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Mobile navigation menu
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    // Close mobile menu after selecting a link
+    document.querySelectorAll("#navLinks a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Smooth reveal animations
+    const revealItems = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12
+      });
+
+      revealItems.forEach(function (item) {
+        observer.observe(item);
+      });
+    } else {
+      revealItems.forEach(function (item) {
+        item.classList.add("visible");
+      });
+    }
+
+    // Current year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
