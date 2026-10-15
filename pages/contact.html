@@ -508,11 +508,11 @@
             <h3>Send an enquiry</h3>
 
             <p>
-              Complete the form below. Your email application will open
-              with your message ready to send.
+              Complete the form below to send your enquiry directly
+              to our team.
             </p>
 
-            <form id="contactForm">
+            <form id="contactForm" action="https://formsubmit.app/f/55xjcrhvem" method="POST">
 
               <div class="form-group">
                 <label for="name">Full name *</label>
@@ -576,14 +576,21 @@
                   placeholder="Tell us about your project or enquiry..."
                   required
                 ></textarea>
+                <input
+  type="text"
+  name="_gotcha"
+  tabindex="-1"
+  autocomplete="off"
+  style="display:none"
+>
               </div>
 
               <button type="submit" class="btn">
-                Prepare Email →
+                Send Message →
               </button>
 
               <p class="form-note">
-                This form opens your email application. It does not
+                Your enquiry will be submitted securely for processing . It does not
                 automatically send or store your message.
               </p>
 
@@ -709,43 +716,9 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-    document.getElementById("contactForm").addEventListener(
-      "submit",
-      function(event) {
-
-        event.preventDefault();
-
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const company = document.getElementById("company").value.trim();
-        const service = document.getElementById("service").value;
-        const message = document.getElementById("message").value.trim();
-
-        const subject = encodeURIComponent(
-          "Website Enquiry: " + service
-        );
-
-        const body = encodeURIComponent(
-          "Hello Smart Business Resilience,\n\n" +
-          "Name: " + name + "\n" +
-          "Email: " + email + "\n" +
-          "Company: " + (company || "Not provided") + "\n" +
-          "Service of interest: " + service + "\n\n" +
-          "Message:\n" + message + "\n\n" +
-          "Kind regards,\n" + name
-        );
-
-        window.location.href =
-          "mailto:info@smartbusinessresilience.co.uk" +
-          "?subject=" + subject +
-          "&body=" + body;
-
-      }
-    );
-  </script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
 
 </body>
   </html>
