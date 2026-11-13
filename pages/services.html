@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +9,18 @@
 
   <meta name="description" content="Explore Smart Business Resilience's electrical, mechanical, public health, lighting, sustainability and integrated engineering disciplines.">
 
-  <meta name="theme-color" content="#080808">
+  <meta name="theme-color" content="#07130F">
 
   <style>
     :root {
-      --black: #080808;
-      --dark: #101014;
-      --pink: #ff1688;
-      --white: #ffffff;
-      --muted: #c2c2cc;
-      --border: rgba(255,255,255,0.12);
+      --black: #07130F;
+      --dark: #0D2118;
+      --pink: #10B981;
+      --white: #FFFFFF;
+      --muted: #B7C9C0;
+      --border: rgba(110,231,183,0.15);
       --container: 1180px;
+      --mint: #6EE7B7;
     }
 
     * {
@@ -55,12 +57,12 @@
     }
 
     .pink {
-      color: var(--pink);
+      color: var(--mint);
     }
 
     .eyebrow {
       display: inline-block;
-      color: var(--pink);
+      color: var(--mint);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 3px;
@@ -95,16 +97,16 @@
       padding: 14px 23px;
       border-radius: 6px;
       border: 1px solid var(--pink);
-      background: var(--pink);
-      color: white;
+      background: linear-gradient(135deg, #10B981, #059669);
+      color: #FFFFFF;
       font-size: 14px;
       font-weight: 700;
-      transition: .25s ease;
+      transition: .3s ease;
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(255,22,136,.2);
+      box-shadow: 0 10px 30px rgba(16,185,129,.22);
     }
 
     .btn-outline {
@@ -121,7 +123,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(8,8,8,.96);
+      background: rgba(7,19,15,.96);
       backdrop-filter: blur(15px);
       border-bottom: 1px solid var(--border);
     }
@@ -150,6 +152,9 @@
       place-items: center;
       font-size: 14px;
       font-weight: 900;
+      color: var(--mint);
+      background: rgba(16,185,129,.08);
+      box-shadow: 0 0 18px rgba(16,185,129,.08);
     }
 
     .brand-name {
@@ -161,7 +166,7 @@
 
     .brand-name span {
       display: block;
-      color: var(--pink);
+      color: var(--mint);
       letter-spacing: 3px;
     }
 
@@ -174,13 +179,13 @@
     .nav-links a {
       font-size: 13px;
       font-weight: 600;
-      color: #e5e5eb;
+      color: #D5E5DC;
       transition: color .2s;
     }
 
     .nav-links a:hover,
     .nav-links a.active {
-      color: var(--pink);
+      color: var(--mint);
     }
 
     .menu-toggle {
@@ -199,8 +204,9 @@
     .page-hero {
       padding: 110px 0;
       background:
-        radial-gradient(ellipse at 90% 20%, rgba(255,22,136,.16), transparent 40%),
-        linear-gradient(120deg, #080808, #111119, #080808);
+        radial-gradient(ellipse at 90% 20%, rgba(16,185,129,.19), transparent 40%),
+        radial-gradient(ellipse at 10% 90%, rgba(110,231,183,.07), transparent 40%),
+        linear-gradient(120deg, #07130F, #0D2118, #07130F);
       position: relative;
       overflow: hidden;
     }
@@ -220,7 +226,11 @@
 
     .page-hero h1 span {
       display: block;
-      color: var(--pink);
+      color: var(--mint);
+      background: linear-gradient(90deg, #10B981, #6EE7B7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .page-hero p {
@@ -251,8 +261,8 @@
     .service-card {
       padding: 30px;
       background:
-        radial-gradient(circle at 100% 0%, rgba(255,22,136,.09), transparent 45%),
-        #101014;
+        radial-gradient(circle at 100% 0%, rgba(16,185,129,.12), transparent 45%),
+        linear-gradient(145deg, #10251B, #0D2118);
       border: 1px solid var(--border);
       border-radius: 12px;
       transition: .3s ease;
@@ -260,8 +270,8 @@
 
     .service-card:hover {
       transform: translateY(-6px);
-      border-color: var(--pink);
-      box-shadow: 0 15px 35px rgba(0,0,0,.2);
+      border-color: rgba(110,231,183,.55);
+      box-shadow: 0 15px 35px rgba(0,0,0,.25), 0 0 20px rgba(16,185,129,.07);
     }
 
     .service-icon {
@@ -269,12 +279,18 @@
       height: 54px;
       display: grid;
       place-items: center;
-      background: rgba(255,22,136,.1);
-      border: 1px solid rgba(255,22,136,.35);
+      background: rgba(16,185,129,.12);
+      border: 1px solid rgba(110,231,183,.3);
       border-radius: 11px;
-      color: var(--pink);
+      color: var(--mint);
       font-size: 25px;
       margin-bottom: 23px;
+      transition: .3s ease;
+    }
+
+    .service-card:hover .service-icon {
+      background: rgba(16,185,129,.2);
+      transform: scale(1.06);
     }
 
     .service-card h3 {
@@ -292,7 +308,7 @@
     }
 
     .service-card li {
-      color: #e5e5eb;
+      color: #D5E5DC;
       font-size: 13px;
       padding: 8px 0;
       border-bottom: 1px solid var(--border);
@@ -300,14 +316,16 @@
 
     .service-card li::before {
       content: "✦";
-      color: var(--pink);
+      color: var(--mint);
       margin-right: 10px;
     }
 
     /* ENGINEERING APPROACH */
 
     .approach-section {
-      background: #0c0c10;
+      background:
+        radial-gradient(ellipse at 90% 50%, rgba(16,185,129,.06), transparent 45%),
+        #091A13;
     }
 
     .approach-grid {
@@ -320,11 +338,18 @@
       padding: 28px;
       border: 1px solid var(--border);
       border-radius: 10px;
-      background: #101014;
+      background: linear-gradient(145deg, #10251B, #0D2118);
+      transition: .3s ease;
+    }
+
+    .approach-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(110,231,183,.4);
+      box-shadow: 0 12px 30px rgba(0,0,0,.2);
     }
 
     .approach-number {
-      color: var(--pink);
+      color: var(--mint);
       font-size: 13px;
       font-weight: 800;
       letter-spacing: 2px;
@@ -340,12 +365,12 @@
       font-size: 14px;
     }
 
-    /* PART 1 ENDS HERE */
-
-        /* CTA SECTION */
+    /* CTA SECTION */
 
     .contact-cta {
-      background: linear-gradient(110deg, #d9006c, #ff1688, #d9006c);
+      background:
+        radial-gradient(circle at 85% 20%, rgba(110,231,183,.2), transparent 35%),
+        linear-gradient(110deg, #064E3B, #047857, #065F46);
       padding: 70px 0;
       border: none;
     }
@@ -360,24 +385,32 @@
     .cta-inner h2 {
       font-size: clamp(30px, 4vw, 43px);
       margin-bottom: 12px;
+      color: #FFFFFF;
     }
 
     .cta-inner p {
-      color: white;
+      color: #D1FAE5;
       max-width: 650px;
     }
 
     .cta-inner .btn {
-      background: var(--black);
-      border-color: var(--black);
+      background: #07130F;
+      border-color: #07130F;
+      color: #FFFFFF;
       flex-shrink: 0;
+    }
+
+    .cta-inner .btn:hover {
+      background: #0D2118;
+      border-color: #6EE7B7;
+      box-shadow: 0 10px 30px rgba(0,0,0,.2);
     }
 
     /* FOOTER */
 
     .footer {
       padding: 60px 0 25px;
-      background: #060608;
+      background: #050E0A;
     }
 
     .footer-grid {
@@ -408,8 +441,12 @@
       color: var(--muted);
     }
 
+    .footer-links a {
+      transition: color .2s ease;
+    }
+
     .footer-links a:hover {
-      color: var(--pink);
+      color: var(--mint);
     }
 
     .footer-bottom {
