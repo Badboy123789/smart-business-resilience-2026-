@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +7,18 @@
 
 <title>FAQs | Smart Business Resilience</title>
 <meta name="description" content="Find answers to common questions about Smart Business Resilience and its engineering services.">
-<meta name="theme-color" content="#080808">
+<meta name="theme-color" content="#07130F">
 
 <style>
 :root {
-  --black: #080808;
-  --dark: #101014;
-  --pink: #ff1688;
-  --white: #ffffff;
-  --muted: #c2c2cc;
-  --border: rgba(255,255,255,.12);
+  --black: #07130F;
+  --dark: #0D2118;
+  --card: #10271D;
+  --pink: #10B981;
+  --white: #FFFFFF;
+  --muted: #B7C9C0;
+  --border: rgba(110,231,183,.15);
+  --mint: #6EE7B7;
   --container: 1100px;
 }
 
@@ -59,7 +62,7 @@ section {
 
 .eyebrow {
   display: inline-block;
-  color: var(--pink);
+  color: var(--mint);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 3px;
@@ -74,18 +77,19 @@ h1, h2, h3 {
 .btn {
   display: inline-block;
   padding: 14px 23px;
-  border-radius: 6px;
+  border-radius: 7px;
   background: var(--pink);
   border: 1px solid var(--pink);
   color: white;
   font-weight: 700;
   font-size: 14px;
-  transition: .25s;
+  transition: .3s ease;
 }
 
 .btn:hover {
+  background: #059669;
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(255,22,136,.2);
+  box-shadow: 0 10px 30px rgba(16,185,129,.2);
 }
 
 /* HEADER */
@@ -94,7 +98,8 @@ h1, h2, h3 {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(8,8,8,.97);
+  background: rgba(7,19,15,.95);
+  backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -119,6 +124,7 @@ h1, h2, h3 {
   place-items: center;
   border: 2px solid var(--pink);
   border-radius: 9px;
+  color: var(--mint);
   font-size: 14px;
   font-weight: 900;
 }
@@ -132,7 +138,7 @@ h1, h2, h3 {
 
 .brand-name span {
   display: block;
-  color: var(--pink);
+  color: var(--mint);
   letter-spacing: 3px;
 }
 
@@ -146,11 +152,12 @@ h1, h2, h3 {
   color: #e5e5eb;
   font-size: 12px;
   font-weight: 600;
+  transition: color .3s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--pink);
+  color: var(--mint);
 }
 
 .menu-toggle {
@@ -168,8 +175,8 @@ h1, h2, h3 {
 .hero {
   padding: 100px 0;
   background:
-    radial-gradient(ellipse at 90% 20%, rgba(255,22,136,.17), transparent 40%),
-    linear-gradient(120deg, #080808, #111119, #080808);
+    radial-gradient(ellipse at 90% 20%, rgba(16,185,129,.18), transparent 40%),
+    linear-gradient(120deg, #07130F, #10271D, #07130F);
 }
 
 .hero-content {
@@ -184,7 +191,7 @@ h1, h2, h3 {
 
 .hero h1 span {
   display: block;
-  color: var(--pink);
+  color: var(--mint);
 }
 
 .hero p {
@@ -222,11 +229,16 @@ h1, h2, h3 {
 }
 
 .faq-item {
-  background: var(--dark);
+  background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 9px;
+  border-radius: 10px;
   overflow: hidden;
-  transition: border-color .2s;
+  transition: border-color .3s ease, transform .3s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(110,231,183,.4);
+  transform: translateY(-2px);
 }
 
 .faq-item[open] {
@@ -252,7 +264,7 @@ h1, h2, h3 {
   right: 22px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--pink);
+  color: var(--mint);
   font-size: 25px;
 }
 
@@ -271,7 +283,9 @@ h1, h2, h3 {
 /* CONTACT STRIP */
 
 .contact-strip {
-  background: #0c0c10;
+  background:
+    radial-gradient(circle at center, rgba(16,185,129,.13), transparent 70%),
+    var(--dark);
   text-align: center;
 }
 
@@ -293,7 +307,7 @@ h1, h2, h3 {
 
 .footer {
   padding: 50px 0 25px;
-  background: #050505;
+  background: #050E0A;
 }
 
 .footer-grid {
@@ -314,8 +328,12 @@ h1, h2, h3 {
   font-size: 13px;
 }
 
+.footer a {
+  transition: color .3s ease;
+}
+
 .footer a:hover {
-  color: var(--pink);
+  color: var(--mint);
 }
 
 .footer-links {
@@ -364,7 +382,7 @@ h1, h2, h3 {
     left: 0;
     right: 0;
     padding: 20px 5%;
-    background: #080808;
+    background: #07130F;
     border-bottom: 1px solid var(--border);
     flex-direction: column;
     align-items: flex-start;
@@ -448,9 +466,8 @@ h1, h2, h3 {
     </h1>
 
     <p>
-      Find answers to common questions about Smart Business Resilience,
-      its engineering disciplines and how to start a conversation about
-      a project.
+      Find answers about our engineering services, projects
+      and how to get in touch.
     </p>
 
     <a href="contact.html" class="btn">Ask Us a Question →</a>
@@ -469,8 +486,7 @@ h1, h2, h3 {
       <h2>What Would You Like to Know?</h2>
 
       <p>
-        Explore the answers below. If your question is not covered,
-        please contact the team for further information.
+        Browse our answers or contact the team for more information.
       </p>
 
       <a href="contact.html" class="btn">Contact Us</a>
@@ -482,11 +498,8 @@ h1, h2, h3 {
         <summary>What does Smart Business Resilience do?</summary>
         <div class="faq-answer">
           <p>
-            Smart Business Resilience focuses on engineering-related
-            building services and the considerations involved in
-            coordinated, functional and sustainable building design.
-            Please contact the team to confirm the services relevant
-            to your project.
+            We focus on building services engineering, coordinated
+            design and sustainable building solutions.
           </p>
         </div>
       </details>
@@ -495,10 +508,8 @@ h1, h2, h3 {
         <summary>Which engineering disciplines are covered?</summary>
         <div class="faq-answer">
           <p>
-            The areas presented on this website include electrical
-            engineering, mechanical engineering, public health engineering,
-            lighting and sustainability. Contact the company to discuss
-            your particular requirements.
+            Electrical, mechanical, public health, lighting
+            and sustainability engineering.
           </p>
         </div>
       </details>
@@ -507,20 +518,18 @@ h1, h2, h3 {
         <summary>Can I enquire about a new project?</summary>
         <div class="faq-answer">
           <p>
-            Yes. Use the contact page to describe your project, its
-            location, the type of building and the engineering support
-            you are looking for.
+            Yes. Use our contact page to share your project
+            details and engineering requirements.
           </p>
         </div>
       </details>
 
       <details class="faq-item">
-        <summary>What information should I provide in my enquiry?</summary>
+        <summary>What information should I provide?</summary>
         <div class="faq-answer">
           <p>
-            It is helpful to include the project type, location, current
-            stage, required services, key deadlines and any available
-            drawings or project information.
+            Include the project type, location, required services,
+            deadlines and any available drawings.
           </p>
         </div>
       </details>
@@ -529,10 +538,8 @@ h1, h2, h3 {
         <summary>Does the company consider sustainability?</summary>
         <div class="faq-answer">
           <p>
-            Sustainability considerations featured on this website include
-            energy efficiency, lighting performance, resource use,
-            maintainability and long-term building performance. The
-            appropriate considerations depend on each project.
+            Yes. We consider energy efficiency, resource use
+            and long-term building performance.
           </p>
         </div>
       </details>
@@ -541,10 +548,8 @@ h1, h2, h3 {
         <summary>Can engineering disciplines be considered together?</summary>
         <div class="faq-answer">
           <p>
-            Electrical, mechanical, public health, lighting and
-            sustainability considerations can interact. Coordination
-            between relevant disciplines is an important consideration
-            in building services design.
+            Yes. Coordinating relevant engineering disciplines
+            helps support integrated building design.
           </p>
         </div>
       </details>
@@ -553,8 +558,8 @@ h1, h2, h3 {
         <summary>How do I contact Smart Business Resilience?</summary>
         <div class="faq-answer">
           <p>
-            You can use the contact page or email
-            info@smartbusinessresilience.co.uk to make an enquiry.
+            Email info@smartbusinessresilience.co.uk or use
+            our contact page.
           </p>
         </div>
       </details>
@@ -563,9 +568,8 @@ h1, h2, h3 {
         <summary>Where can I see the company's projects?</summary>
         <div class="faq-answer">
           <p>
-            Visit the Projects page for the project information available
-            on this website. Please contact the company if you need
-            further details about its experience or previous work.
+            Visit our Projects page to explore the work
+            featured on this website.
           </p>
         </div>
       </details>
@@ -574,9 +578,8 @@ h1, h2, h3 {
         <summary>How can I discuss a specific requirement?</summary>
         <div class="faq-answer">
           <p>
-            Use the contact page to provide a brief description of your
-            requirements. The company can then advise on the appropriate
-            next steps.
+            Send us a brief description of your requirements
+            through the contact page.
           </p>
         </div>
       </details>
@@ -595,9 +598,7 @@ h1, h2, h3 {
     <h2>Let's Talk About Your Project.</h2>
 
     <p>
-      If you need more information about engineering services or have
-      a specific project in mind, get in touch with Smart Business
-      Resilience.
+      Need more information? Our team welcomes your enquiries.
     </p>
 
     <a href="contact.html" class="btn">Contact Our Team →</a>
@@ -622,8 +623,8 @@ h1, h2, h3 {
         </a>
 
         <p style="margin-top:18px;max-width:330px;">
-          An engineering-focused approach to building services,
-          coordination and sustainable building performance.
+          Engineering solutions focused on coordination
+          and sustainable building performance.
         </p>
       </div>
 
@@ -688,8 +689,9 @@ navLinks.querySelectorAll("a").forEach(function(link) {
   });
 });
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 </script>
 
 </body>
-  </html>
+</html>
