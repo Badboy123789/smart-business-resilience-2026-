@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,19 +7,20 @@
 
   <title>Projects | Smart Business Resilience</title>
 
-  <meta name="description" content="Explore the engineering disciplines and project types relevant to Smart Business Resilience.">
+  <meta name="description" content="Explore Smart Business Resilience engineering project examples across electrical, mechanical, public health, lighting and sustainability.">
 
-  <meta name="theme-color" content="#080808">
+  <meta name="theme-color" content="#07130F">
 
   <style>
     :root {
-      --black: #080808;
-      --dark: #101014;
-      --pink: #ff1688;
-      --white: #ffffff;
-      --muted: #c2c2cc;
-      --border: rgba(255,255,255,0.12);
+      --black: #07130F;
+      --dark: #0D2118;
+      --pink: #10B981;
+      --white: #FFFFFF;
+      --muted: #B7C9C0;
+      --border: rgba(110,231,183,0.15);
       --container: 1180px;
+      --mint: #6EE7B7;
     }
 
     * {
@@ -51,12 +53,12 @@
     }
 
     .pink {
-      color: var(--pink);
+      color: var(--mint);
     }
 
     .eyebrow {
       display: inline-block;
-      color: var(--pink);
+      color: var(--mint);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 3px;
@@ -92,15 +94,17 @@
       border-radius: 6px;
       border: 1px solid var(--pink);
       background: var(--pink);
-      color: white;
+      color: #04130D;
       font-size: 14px;
       font-weight: 700;
-      transition: .25s ease;
+      transition: .3s ease;
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(255,22,136,.2);
+      box-shadow: 0 10px 30px rgba(16,185,129,.2);
+      background: var(--mint);
+      border-color: var(--mint);
     }
 
     /* HEADER */
@@ -109,7 +113,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(8,8,8,.96);
+      background: rgba(7,19,15,.96);
       backdrop-filter: blur(15px);
       border-bottom: 1px solid var(--border);
     }
@@ -138,6 +142,8 @@
       place-items: center;
       font-size: 14px;
       font-weight: 900;
+      color: var(--mint);
+      background: rgba(16,185,129,.08);
     }
 
     .brand-name {
@@ -149,7 +155,7 @@
 
     .brand-name span {
       display: block;
-      color: var(--pink);
+      color: var(--mint);
       letter-spacing: 3px;
     }
 
@@ -162,13 +168,13 @@
     .nav-links a {
       font-size: 13px;
       font-weight: 600;
-      color: #e5e5eb;
+      color: #E5EEE9;
       transition: color .2s;
     }
 
     .nav-links a:hover,
     .nav-links a.active {
-      color: var(--pink);
+      color: var(--mint);
     }
 
     .menu-toggle {
@@ -187,8 +193,8 @@
     .page-hero {
       padding: 110px 0;
       background:
-        radial-gradient(ellipse at 90% 20%, rgba(255,22,136,.16), transparent 40%),
-        linear-gradient(120deg, #080808, #111119, #080808);
+        radial-gradient(ellipse at 90% 20%, rgba(16,185,129,.19), transparent 40%),
+        linear-gradient(120deg, #07130F, #10291D, #07130F);
       position: relative;
       overflow: hidden;
     }
@@ -207,7 +213,7 @@
 
     .page-hero h1 span {
       display: block;
-      color: var(--pink);
+      color: var(--mint);
     }
 
     .page-hero p {
@@ -236,7 +242,7 @@
     }
 
     .project-card {
-      background: #101014;
+      background: linear-gradient(145deg, #10251B, #0A1811);
       border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
@@ -246,6 +252,7 @@
     .project-card:hover {
       transform: translateY(-6px);
       border-color: var(--pink);
+      box-shadow: 0 12px 30px rgba(16,185,129,.08);
     }
 
     .project-visual {
@@ -253,13 +260,13 @@
       display: grid;
       place-items: center;
       background:
-        radial-gradient(circle at 80% 20%, rgba(255,22,136,.25), transparent 40%),
-        linear-gradient(135deg, #191920, #080808);
+        radial-gradient(circle at 80% 20%, rgba(16,185,129,.22), transparent 40%),
+        linear-gradient(135deg, #173629, #08140E);
       border-bottom: 1px solid var(--border);
     }
 
     .project-visual span {
-      color: var(--pink);
+      color: var(--mint);
       font-size: 55px;
       font-weight: 900;
     }
@@ -269,7 +276,7 @@
     }
 
     .project-category {
-      color: var(--pink);
+      color: var(--mint);
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 2px;
@@ -286,13 +293,84 @@
       font-size: 14px;
     }
 
+    /* PORTFOLIO GALLERY */
+
+    .portfolio-section {
+      background:
+        radial-gradient(ellipse at 10% 10%, rgba(16,185,129,.07), transparent 40%),
+        var(--black);
+    }
+
+    .portfolio-heading {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 42px;
+    }
+
+    .portfolio-heading p {
+      max-width: 680px;
+      margin: auto;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .portfolio-card {
+      background: #0D2118;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: .3s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--pink);
+      box-shadow: 0 12px 30px rgba(16,185,129,.1);
+    }
+
+    .portfolio-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+      transition: transform .4s ease;
+    }
+
+    .portfolio-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .portfolio-content {
+      padding: 22px;
+    }
+
+    .portfolio-content h3 {
+      color: var(--mint);
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-content p {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .portfolio-button {
+      text-align: center;
+      margin-top: 45px;
+    }
+
     /* TRANSPARENCY NOTE */
 
     .note-box {
       margin-top: 35px;
       padding: 22px;
       border-left: 3px solid var(--pink);
-      background: #101014;
+      background: #0D2118;
       border-radius: 0 8px 8px 0;
     }
 
@@ -300,12 +378,15 @@
       font-size: 13px;
     }
 
-    /* RESPONSIVE CSS CONTINUES IN PART 2 */
+    .note-box strong {
+      color: var(--mint);
+    }
 
-        /* CONTACT CTA */
+    /* CONTACT CTA */
 
     .contact-cta {
-      background: linear-gradient(110deg, #d9006c, #ff1688, #d9006c);
+      background:
+        linear-gradient(110deg, #065F46, #10B981, #047857);
       padding: 70px 0;
       border: none;
     }
@@ -320,24 +401,31 @@
     .cta-inner h2 {
       font-size: clamp(30px, 4vw, 43px);
       margin-bottom: 12px;
+      color: white;
     }
 
     .cta-inner p {
-      color: white;
+      color: #E6FFF4;
       max-width: 650px;
     }
 
     .cta-inner .btn {
       background: var(--black);
       border-color: var(--black);
+      color: white;
       flex-shrink: 0;
+    }
+
+    .cta-inner .btn:hover {
+      background: #10251B;
+      border-color: #10251B;
     }
 
     /* FOOTER */
 
     .footer {
       padding: 60px 0 25px;
-      background: #060608;
+      background: #050E09;
     }
 
     .footer-grid {
@@ -369,7 +457,7 @@
     }
 
     .footer-links a:hover {
-      color: var(--pink);
+      color: var(--mint);
     }
 
     .footer-bottom {
@@ -393,7 +481,8 @@
         font-size: 11px;
       }
 
-      .projects-grid {
+      .projects-grid,
+      .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -443,8 +532,13 @@
         font-size: 15px;
       }
 
-      .projects-grid {
+      .projects-grid,
+      .portfolio-grid {
         grid-template-columns: 1fr;
+      }
+
+      .portfolio-card img {
+        height: 230px;
       }
 
       .cta-inner {
@@ -471,6 +565,7 @@
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
       }
     }
   </style>
@@ -529,12 +624,12 @@
         </h1>
 
         <p>
-          Explore examples of how engineering disciplines contribute
-          to building functionality, coordination and performance.
+          Explore engineering applications across building systems,
+          coordination and performance.
         </p>
 
         <a href="#project-examples" class="btn">
-          Explore Project Types ↓
+          Explore Projects ↓
         </a>
 
       </div>
@@ -555,9 +650,8 @@
           </h2>
 
           <p>
-            The examples below illustrate types of building-services
-            applications relevant to SBR's engineering disciplines.
-            They are not claims of completed client projects.
+            Explore building-services applications across SBR's
+            engineering disciplines.
           </p>
         </div>
 
@@ -571,12 +665,10 @@
 
             <div class="project-content">
               <div class="project-category">Electrical</div>
-
               <h3>Building Electrical Systems</h3>
-
               <p>
-                Electrical systems and power distribution
-                considerations for buildings and their intended use.
+                Power distribution and electrical systems
+                for building functionality and reliability.
               </p>
             </div>
           </article>
@@ -589,12 +681,10 @@
 
             <div class="project-content">
               <div class="project-category">Mechanical</div>
-
               <h3>Mechanical Building Services</h3>
-
               <p>
-                Mechanical services that support indoor comfort,
-                ventilation and building operation.
+                Systems supporting ventilation, indoor comfort
+                and building operation.
               </p>
             </div>
           </article>
@@ -607,12 +697,10 @@
 
             <div class="project-content">
               <div class="project-category">Public Health</div>
-
               <h3>Water & Drainage Systems</h3>
-
               <p>
-                Water supply, plumbing and drainage considerations
-                that support building hygiene and functionality.
+                Water supply, plumbing and drainage systems
+                supporting building hygiene.
               </p>
             </div>
           </article>
@@ -625,12 +713,10 @@
 
             <div class="project-content">
               <div class="project-category">Lighting</div>
-
               <h3>Lighting Applications</h3>
-
               <p>
-                Lighting considerations for visibility, visual comfort,
-                usability and energy awareness.
+                Lighting solutions for visibility, comfort
+                and energy awareness.
               </p>
             </div>
           </article>
@@ -643,12 +729,10 @@
 
             <div class="project-content">
               <div class="project-category">Sustainability</div>
-
               <h3>Resource Efficiency</h3>
-
               <p>
-                Sustainability considerations that encourage
-                responsible resource use and long-term performance.
+                Responsible resource use and long-term
+                building performance.
               </p>
             </div>
           </article>
@@ -661,12 +745,10 @@
 
             <div class="project-content">
               <div class="project-category">Integration</div>
-
               <h3>Coordinated Building Services</h3>
-
               <p>
-                Considering how different building-services disciplines
-                interact within the same building environment.
+                Bringing different building-services disciplines
+                together within one environment.
               </p>
             </div>
           </article>
@@ -676,11 +758,169 @@
 
         <div class="note-box">
           <p>
-            <strong>Note:</strong> These cards describe illustrative
-            project types, not verified completed projects. They can
-            be replaced with actual project photographs, descriptions
-            and approved client details when those materials are available.
+            <strong>Note:</strong> These cards describe engineering
+            applications, not verified completed client projects.
           </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PORTFOLIO GALLERY -->
+
+    <section class="portfolio-section">
+      <div class="container">
+
+        <div class="portfolio-heading">
+          <span class="eyebrow">OUR PORTFOLIO</span>
+
+          <h2>
+            Our Engineering
+            <span class="pink">Projects.</span>
+          </h2>
+
+          <p>
+            Explore project images across electrical, mechanical,
+            public health, lighting and sustainable engineering.
+          </p>
+        </div>
+
+
+        <div class="portfolio-grid">
+
+          <!-- PROJECT 1 -->
+
+          <article class="portfolio-card">
+
+            <img
+              src="../assets/images/IMG-20261013-WA0070.jpg"
+              alt="Electrical engineering project"
+              loading="lazy"
+            >
+
+            <div class="portfolio-content">
+              <h3>Electrical Engineering</h3>
+              <p>
+                Electrical solutions supporting reliable
+                and efficient building systems.
+              </p>
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 2 -->
+
+          <article class="portfolio-card">
+
+            <img
+              src="../assets/images/IMG-20261013-WA0071.jpg"
+              alt="Mechanical engineering project"
+              loading="lazy"
+            >
+
+            <div class="portfolio-content">
+              <h3>Mechanical Engineering</h3>
+              <p>
+                Mechanical systems developed around
+                project requirements.
+              </p>
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 3 -->
+
+          <article class="portfolio-card">
+
+            <img
+              src="../assets/images/IMG-20261013-WA0072.jpg"
+              alt="Public health engineering project"
+              loading="lazy"
+            >
+
+            <div class="portfolio-content">
+              <h3>Public Health Engineering</h3>
+              <p>
+                Building services supporting water,
+                drainage and public health systems.
+              </p>
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 4 -->
+
+          <article class="portfolio-card">
+
+            <img
+              src="../assets/images/IMG-20261013-WA0073.jpg"
+              alt="Lighting engineering project"
+              loading="lazy"
+            >
+
+            <div class="portfolio-content">
+              <h3>Lighting Solutions</h3>
+              <p>
+                Lighting designed to improve functionality,
+                comfort and energy efficiency.
+              </p>
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 5 -->
+
+          <article class="portfolio-card">
+
+            <img
+              src="../assets/images/IMG-20261013-WA0075.jpg"
+              alt="Sustainable engineering project"
+              loading="lazy"
+            >
+
+            <div class="portfolio-content">
+              <h3>Sustainability</h3>
+              <p>
+                Engineering approaches considering
+                energy use and environmental impact.
+              </p>
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 6 -->
+
+          <article class="portfolio-card">
+
+            <img
+              src="../assets/images/IMG-20261013-WA0076.jpg"
+              alt="Integrated engineering project"
+              loading="lazy"
+            >
+
+            <div class="portfolio-content">
+              <h3>Integrated Engineering</h3>
+              <p>
+                Coordinated engineering services
+                supporting project delivery.
+              </p>
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="portfolio-button">
+          <a href="contact.html" class="btn">
+            Discuss Your Project →
+          </a>
         </div>
 
       </div>
@@ -701,49 +941,45 @@
           </h2>
 
           <p>
-            Buildings depend on different systems working together.
-            Considering their relationships can help support
-            practical decisions about building performance.
+            Building systems work together. Understanding their
+            relationships supports better engineering decisions.
           </p>
         </div>
+
 
         <div class="projects-grid">
 
           <article class="project-card">
             <div class="project-content">
               <div class="project-category">01 / Functionality</div>
-
               <h3>Purposeful Design</h3>
-
               <p>
-                Considering how building systems support the intended
-                use of a space and the needs of its occupants.
+                Supporting the intended use of a space
+                and the needs of its occupants.
               </p>
             </div>
           </article>
+
 
           <article class="project-card">
             <div class="project-content">
               <div class="project-category">02 / Coordination</div>
-
               <h3>Connected Systems</h3>
-
               <p>
-                Recognising the relationships between different
-                engineering disciplines within a building.
+                Recognising how engineering disciplines
+                interact within a building.
               </p>
             </div>
           </article>
 
+
           <article class="project-card">
             <div class="project-content">
               <div class="project-category">03 / Performance</div>
-
               <h3>Long-Term Thinking</h3>
-
               <p>
-                Considering resource use, functionality and
-                long-term building performance.
+                Considering resource use, functionality
+                and lasting building performance.
               </p>
             </div>
           </article>
@@ -763,8 +999,8 @@
           <h2>Have an Engineering Enquiry?</h2>
 
           <p>
-            Contact Smart Business Resilience to discuss your
-            requirements and areas of interest.
+            Contact Smart Business Resilience to discuss
+            your project requirements.
           </p>
         </div>
 
@@ -797,8 +1033,7 @@
 
           <p>
             Engineering-focused thinking across electrical,
-            mechanical, public health, lighting and sustainability
-            disciplines.
+            mechanical, public health, lighting and sustainability.
           </p>
         </div>
 
@@ -881,295 +1116,6 @@
     document.getElementById("currentYear").textContent =
       new Date().getFullYear();
   </script>
-
-<section style="padding:60px 20px; background:#000000; font-family:Arial,sans-serif;">
-
-    <div style="max-width:1150px; margin:auto;">
-
-        <div style="text-align:center; margin-bottom:40px;">
-
-            <p style="color:#C77B91; font-weight:bold; letter-spacing:3px; text-transform:uppercase;">
-                Our Portfolio
-            </p>
-
-            <h2 style="font-size:36px; color:#C77B91; margin:10px 0;">
-                Our Engineering Projects
-            </h2>
-
-            <p style="color:#C77B91; font-size:16px; line-height:1.8; max-width:700px; margin:0 auto;">
-                Discover our engineering projects and solutions across electrical,
-                mechanical, public health, lighting and sustainable engineering.
-            </p>
-
-        </div>
-
-        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:25px;">
-
-            <!-- PROJECT 1: ELECTRICAL ENGINEERING -->
-
-            <div style="background:#000000; border:1px solid #C77B91; border-radius:14px; overflow:hidden;">
-
-                <img src="../assets/images/IMG-20261013-WA0070.jpg"
-                     alt="Electrical engineering project"
-                     style="width:100%; height:230px; object-fit:cover; display:block;">
-
-                <div style="padding:22px;">
-
-                    <h3 style="color:#C77B91; margin:0 0 10px;">
-                        Electrical Engineering
-                    </h3>
-
-                    <p style="color:#C77B91; line-height:1.7; margin:0;">
-                        Electrical engineering solutions designed to support reliable and efficient building systems.
-                    </p>
-
-                </div>
-            </div>
-
-
-            <!-- PROJECT 2: MECHANICAL ENGINEERING -->
-
-            <div style="background:#000000; border:1px solid #C77B91; border-radius:14px; overflow:hidden;">
-
-                <img src="../assets/images/IMG-20261013-WA0071.jpg"
-                     alt="Mechanical engineering project"
-                     style="width:100%; height:230px; object-fit:cover; display:block;">
-
-                <div style="padding:22px;">
-
-                    <h3 style="color:#C77B91; margin:0 0 10px;">
-                        Mechanical Engineering
-                    </h3>
-
-                    <p style="color:#C77B91; line-height:1.7; margin:0;">
-                        Mechanical systems and engineering solutions developed around project requirements.
-                    </p>
-
-                </div>
-            </div>
-
-
-            <!-- PROJECT 3: PUBLIC HEALTH ENGINEERING -->
-
-            <div style="background:#000000; border:1px solid #C77B91; border-radius:14px; overflow:hidden;">
-
-                <img src="../assets/images/IMG-20261013-WA0072.jpg"
-                     alt="Public health engineering project"
-                     style="width:100%; height:230px; object-fit:cover; display:block;">
-
-                <div style="padding:22px;">
-
-                    <h3 style="color:#C77B91; margin:0 0 10px;">
-                        Public Health Engineering
-                    </h3>
-
-                    <p style="color:#C77B91; line-height:1.7; margin:0;">
-                        Building services solutions supporting water, drainage and public health systems.
-                    </p>
-
-                </div>
-            </div>
-
-
-            <!-- PROJECT 4: LIGHTING SOLUTIONS -->
-
-            <div style="background:#000000; border:1px solid #C77B91; border-radius:14px; overflow:hidden;">
-
-                <img src="../assets/images/IMG-20261013-WA0073.jpg"
-                     alt="Lighting engineering project"
-                     style="width:100%; height:230px; object-fit:cover; display:block;">
-
-                <div style="padding:22px;">
-
-                    <h3 style="color:#C77B91; margin:0 0 10px;">
-                        Lighting Solutions
-                    </h3>
-
-                    <p style="color:#C77B91; line-height:1.7; margin:0;">
-                        Lighting solutions designed to enhance functionality, comfort and energy efficiency.
-                    </p>
-
-                </div>
-            </div>
-          <section style="padding:60px 20px; background:#000000; font-family:Arial,sans-serif;">
-
-    <div style="max-width:1150px; margin:auto;">
-
-        <!-- SECTION HEADING -->
-
-        <div style="text-align:center; margin-bottom:40px;">
-
-            <p style="color:#C77B91; font-weight:bold; letter-spacing:3px; text-transform:uppercase;">
-                Our Portfolio
-            </p>
-
-            <h2 style="font-size:36px; color:#C77B91; margin:10px 0;">
-                Our Engineering Projects
-            </h2>
-
-            <p style="color:#C77B91; font-size:16px; line-height:1.8; max-width:700px; margin:0 auto;">
-                Discover our engineering projects and solutions across electrical,
-                mechanical, public health, lighting and sustainable engineering.
-            </p>
-
-        </div>
-
-
-        <!-- PROJECT GALLERY -->
-
-        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:25px;">
-
-
-            <!-- PROJECT 1: ELECTRICAL ENGINEERING -->
-
-            <div style="background:#000000; border:2px solid #C77B91; border-radius:14px; overflow:hidden;">
-
-                <img src="../assets/images/IMG-20261013-WA0070.jpg"
-                     alt="Electrical engineering project"
-                     style="width:100%; height:230px; object-fit:cover; display:block;">
-
-                <div style="padding:22px;">
-
-                    <h3 style="color:#C77B91; margin:0 0 10px;">
-                        Electrical Engineering
-                    </h3>
-
-                    <p style="color:#C77B91; line-height:1.7; margin:0;">
-                        Electrical engineering solutions designed to support reliable and efficient building systems.
-                    </p>
-
-                </div>
-            </div>
-
-
-            <!-- PROJECT 2: MECHANICAL ENGINEERING -->
-
-            <div style="background:#000000; border:2px solid #C77B91; border-radius:14px; overflow:hidden;">
-
-                <img src="../assets/images/IMG-20261013-WA0071.jpg"
-                     alt="Mechanical engineering project"
-                     style="width:100%; height:230px; object-fit:cover; display:block;">
-
-                <div style="padding:22px;">
-
-                    <h3 style="color:#C77B91; margin:0 0 10px;">
-                        Mechanical Engineering
-                    </h3>
-
-                    <p style="color:#C77B91; line-height:1.7; margin:0;">
-                        Mechanical systems and engineering solutions developed around project requirements.
-                    </p>
-
-                </div>
-            </div>
-
-
-            <!-- PROJECT 3: PUBLIC HEALTH ENGINEERING -->
-
-            <div style="background:#000000; border:2px solid #C77B91; border-radius:14px; overflow:hidden;">
-
-                <img src="../assets/images/IMG-20261013-WA0072.jpg"
-                     alt="Public health engineering project"
-                     style="width:100%; height:230px; object-fit:cover; display:block;">
-
-                <div style="padding:22px;">
-
-                    <h3 style="color:#C77B91; margin:0 0 10px;">
-                        Public Health Engineering
-                    </h3>
-
-                    <p style="color:#C77B91; line-height:1.7; margin:0;">
-                        Building services solutions supporting water, drainage and public health systems.
-                    </p>
-
-                </div>
-            </div>
-
-
-            <!-- PROJECT 4: LIGHTING SOLUTIONS -->
-
-            <div style="background:#000000; border:2px solid #C77B91; border-radius:14px; overflow:hidden;">
-
-                <img src="../assets/images/IMG-20261013-WA0073.jpg"
-                     alt="Lighting engineering project"
-                     style="width:100%; height:230px; object-fit:cover; display:block;">
-
-                <div style="padding:22px;">
-
-                    <h3 style="color:#C77B91; margin:0 0 10px;">
-                        Lighting Solutions
-                    </h3>
-
-                    <p style="color:#C77B91; line-height:1.7; margin:0;">
-                        Lighting solutions designed to enhance functionality, comfort and energy efficiency.
-                    </p>
-
-                </div>
-            </div>
-
-
-            <!-- PROJECT 5: SUSTAINABILITY -->
-
-            <div style="background:#000000; border:2px solid #C77B91; border-radius:14px; overflow:hidden;">
-
-                <img src="../assets/images/IMG-20261013-WA0075.jpg"
-                     alt="Sustainable engineering project"
-                     style="width:100%; height:230px; object-fit:cover; display:block;">
-
-                <div style="padding:22px;">
-
-                    <h3 style="color:#C77B91; margin:0 0 10px;">
-                        Sustainability
-                    </h3>
-
-                    <p style="color:#C77B91; line-height:1.7; margin:0;">
-                        Sustainable engineering approaches that consider energy use and environmental impact.
-                    </p>
-
-                </div>
-            </div>
-
-
-            <!-- PROJECT 6: INTEGRATED ENGINEERING -->
-
-            <div style="background:#000000; border:2px solid #C77B91; border-radius:14px; overflow:hidden;">
-
-                <img src="../assets/images/IMG-20261013-WA0076.jpg"
-                     alt="Integrated engineering project"
-                     style="width:100%; height:230px; object-fit:cover; display:block;">
-
-                <div style="padding:22px;">
-
-                    <h3 style="color:#C77B91; margin:0 0 10px;">
-                        Integrated Engineering
-                    </h3>
-
-                    <p style="color:#C77B91; line-height:1.7; margin:0;">
-                        Integrated engineering services supporting coordinated project delivery.
-                    </p>
-
-                </div>
-            </div>
-
-
-        </div>
-
-
-        <!-- CONTACT BUTTON -->
-
-        <div style="text-align:center; margin-top:45px;">
-
-            <a href="contact.html"
-               style="display:inline-block; background:#C77B91; color:#000000; padding:15px 32px; border-radius:6px; text-decoration:none; font-weight:bold; border:2px solid #C77B91;">
-                Discuss Your Project
-            </a>
-
-        </div>
-
-
-    </div>
-
-          </section>
 
 </body>
 </html>
