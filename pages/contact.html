@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,20 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Contact Us | Smart Business Resilience</title>
-
-  <meta name="description" content="Contact Smart Business Resilience to discuss electrical, mechanical, public health, lighting and sustainability engineering services.">
-
-  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Contact Smart Business Resilience about our engineering services and projects.">
+  <meta name="theme-color" content="#07130F">
 
   <style>
     :root {
-      --black: #080808;
-      --dark: #111111;
-      --card: #171717;
-      --pink: #ff2f92;
-      --white: #ffffff;
-      --muted: #bdbdbd;
-      --border: rgba(255,255,255,0.12);
+      --black: #07130F;
+      --dark: #0D2118;
+      --card: #10271D;
+      --pink: #10B981;
+      --white: #FFFFFF;
+      --muted: #B7C9C0;
+      --border: rgba(110,231,183,0.15);
+      --mint: #6EE7B7;
+      --container: 1180px;
     }
 
     * {
@@ -44,12 +45,13 @@
     }
 
     .container {
-      width: min(1120px, 90%);
+      width: min(var(--container), 90%);
       margin: auto;
     }
 
     header {
-      background: rgba(8,8,8,0.96);
+      background: rgba(7,19,15,0.94);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
@@ -70,8 +72,10 @@
       line-height: 1.3;
     }
 
-    .logo span {
-      color: var(--pink);
+    .logo span,
+    h1 span,
+    h2 span {
+      color: var(--mint);
     }
 
     nav {
@@ -84,28 +88,24 @@
     nav a {
       color: #dddddd;
       font-size: 13px;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
     }
 
     nav a:hover,
     nav a.active {
-      color: var(--pink);
+      color: var(--mint);
     }
 
     .hero {
       padding: 90px 0 75px;
       background:
-        radial-gradient(
-          circle at 85% 20%,
-          rgba(255,47,146,0.14),
-          transparent 35%
-        ),
-        linear-gradient(135deg, #080808, #151015);
+        radial-gradient(circle at 85% 20%, rgba(16,185,129,0.18), transparent 35%),
+        linear-gradient(135deg, #07130F, #10271D);
       border-bottom: 1px solid var(--border);
     }
 
     .eyebrow {
-      color: var(--pink);
+      color: var(--mint);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 3px;
@@ -118,11 +118,6 @@
       line-height: 1.12;
       max-width: 800px;
       margin-bottom: 22px;
-    }
-
-    h1 span,
-    h2 span {
-      color: var(--pink);
     }
 
     .hero p {
@@ -163,6 +158,12 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 32px;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-info:hover,
+    .contact-form:hover {
+      border-color: rgba(110,231,183,0.4);
     }
 
     .contact-info h3,
@@ -184,7 +185,7 @@
     }
 
     .info-item h4 {
-      color: var(--pink);
+      color: var(--mint);
       font-size: 14px;
       margin-bottom: 5px;
     }
@@ -197,7 +198,7 @@
     }
 
     .info-item a:hover {
-      color: var(--pink);
+      color: var(--mint);
     }
 
     .form-group {
@@ -216,23 +217,25 @@
     textarea {
       width: 100%;
       padding: 14px;
-      border: 1px solid #393939;
+      border: 1px solid rgba(110,231,183,0.2);
       border-radius: 8px;
-      background: #0d0d0d;
+      background: #091A12;
       color: var(--white);
       font: inherit;
       font-size: 14px;
       outline: none;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
     input:focus,
     select:focus,
     textarea:focus {
       border-color: var(--pink);
+      box-shadow: 0 0 0 3px rgba(16,185,129,0.12);
     }
 
     select option {
-      background: #111111;
+      background: var(--dark);
       color: white;
     }
 
@@ -247,21 +250,22 @@
       border-radius: 8px;
       padding: 14px 23px;
       background: var(--pink);
-      color: #ffffff;
+      color: white;
       font-size: 14px;
       font-weight: 800;
       cursor: pointer;
-      transition: transform 0.3s, background 0.3s;
+      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
     }
 
     .btn:hover {
-      background: #e51e7d;
-      transform: translateY(-2px);
+      background: #059669;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(16,185,129,0.22);
     }
 
     .form-note {
       margin-top: 13px;
-      color: #a9a9a9;
+      color: var(--muted);
       font-size: 12px;
     }
 
@@ -283,12 +287,13 @@
       padding: 24px;
       border: 1px solid var(--border);
       border-radius: 12px;
-      transition: border-color 0.3s, transform 0.3s;
+      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .service-card:hover {
-      border-color: var(--pink);
-      transform: translateY(-4px);
+      border-color: var(--mint);
+      transform: translateY(-5px);
+      box-shadow: 0 14px 32px rgba(16,185,129,0.10);
     }
 
     .service-card h3 {
@@ -304,12 +309,7 @@
     .cta {
       text-align: center;
       padding: 70px 25px;
-      background:
-        radial-gradient(
-          circle at center,
-          rgba(255,47,146,0.13),
-          transparent 65%
-        );
+      background: radial-gradient(circle at center, rgba(16,185,129,0.16), transparent 65%);
     }
 
     .cta h2 {
@@ -326,7 +326,7 @@
     footer {
       border-top: 1px solid var(--border);
       padding: 30px 0;
-      background: #050505;
+      background: #050E0A;
     }
 
     .footer-inner {
@@ -351,10 +351,11 @@
     .footer-links a {
       color: #cfcfcf;
       font-size: 12px;
+      transition: color 0.3s ease;
     }
 
     .footer-links a:hover {
-      color: var(--pink);
+      color: var(--mint);
     }
 
     @media (max-width: 850px) {
@@ -431,7 +432,6 @@
 
     <section class="hero">
       <div class="container">
-
         <p class="eyebrow">Get in touch</p>
 
         <h1>
@@ -440,11 +440,9 @@
         </h1>
 
         <p>
-          Contact Smart Business Resilience to discuss your requirements,
-          explore our engineering services and find out how we may be able
-          to support your project.
+          Tell us about your project and discover how our engineering
+          services can support your requirements.
         </p>
-
       </div>
     </section>
 
@@ -454,30 +452,24 @@
         <div class="section-heading">
           <p class="eyebrow">Contact our team</p>
 
-          <h2>
-            How can we <span>help you?</span>
-          </h2>
+          <h2>How can we <span>help you?</span></h2>
 
           <p>
-            Tell us a little about your project or enquiry. You can contact
-            us directly by email or use the enquiry form to prepare a message.
+            Send us your enquiry using the form or contact us by email.
           </p>
         </div>
 
         <div class="contact-layout">
 
           <div class="contact-info">
-
             <h3>Contact information</h3>
 
             <p>
-              We welcome enquiries about our engineering disciplines,
-              project requirements and potential collaboration.
+              We welcome project enquiries and collaboration opportunities.
             </p>
 
             <div class="info-item">
               <h4>Email</h4>
-
               <a href="mailto:info@smartbusinessresilience.co.uk">
                 info@smartbusinessresilience.co.uk
               </a>
@@ -485,7 +477,6 @@
 
             <div class="info-item">
               <h4>Engineering services</h4>
-
               <p>
                 Electrical, Mechanical, Public Health, Lighting and
                 Sustainability Engineering.
@@ -494,29 +485,23 @@
 
             <div class="info-item">
               <h4>Enquiries</h4>
-
               <p>
-                Share your project requirements, questions or collaboration
-                ideas with us.
+                Share your project needs, questions or ideas with us.
               </p>
             </div>
-
           </div>
 
           <div class="contact-form">
-
             <h3>Send an enquiry</h3>
 
             <p>
-              Complete the form below to send your enquiry directly
-              to our team.
+              Complete the form to submit your message.
             </p>
 
             <form id="contactForm" action="https://formsubmit.app/f/55xjcrhvem" method="POST">
 
               <div class="form-group">
                 <label for="name">Full name *</label>
-
                 <input
                   type="text"
                   id="name"
@@ -529,12 +514,11 @@
 
               <div class="form-group">
                 <label for="email">Email address *</label>
-
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Enter your email address"
+                  placeholder="Enter your email"
                   autocomplete="email"
                   required
                 >
@@ -542,12 +526,11 @@
 
               <div class="form-group">
                 <label for="company">Company name</label>
-
                 <input
                   type="text"
                   id="company"
                   name="company"
-                  placeholder="Enter your company name"
+                  placeholder="Enter your company"
                   autocomplete="organization"
                 >
               </div>
@@ -573,16 +556,17 @@
                 <textarea
                   id="message"
                   name="message"
-                  placeholder="Tell us about your project or enquiry..."
+                  placeholder="Tell us about your project..."
                   required
                 ></textarea>
+
                 <input
-  type="text"
-  name="_gotcha"
-  tabindex="-1"
-  autocomplete="off"
-  style="display:none"
->
+                  type="text"
+                  name="_gotcha"
+                  tabindex="-1"
+                  autocomplete="off"
+                  style="display:none"
+                >
               </div>
 
               <button type="submit" class="btn">
@@ -590,16 +574,13 @@
               </button>
 
               <p class="form-note">
-                Your enquiry will be submitted securely for processing . It does not
-                automatically send or store your message.
+                Please check your details before submitting.
               </p>
 
             </form>
-
           </div>
 
         </div>
-
       </div>
     </section>
 
@@ -611,11 +592,11 @@
 
           <h2>
             Engineering services for
-            <span>your requirements.</span>
+            <span>your needs.</span>
           </h2>
 
           <p>
-            Select the area most relevant to your enquiry.
+            Explore our key engineering disciplines.
           </p>
         </div>
 
@@ -623,51 +604,35 @@
 
           <div class="service-card">
             <h3>Electrical Engineering</h3>
-            <p>
-              Electrical building systems, infrastructure and coordinated
-              engineering considerations.
-            </p>
+            <p>Building electrical systems and infrastructure.</p>
           </div>
 
           <div class="service-card">
             <h3>Mechanical Engineering</h3>
-            <p>
-              Mechanical building services and system coordination.
-            </p>
+            <p>Mechanical building services and systems.</p>
           </div>
 
           <div class="service-card">
             <h3>Public Health Engineering</h3>
-            <p>
-              Building water services, drainage and public health systems.
-            </p>
+            <p>Water services, drainage and public health systems.</p>
           </div>
 
           <div class="service-card">
             <h3>Lighting</h3>
-            <p>
-              Lighting design considerations, performance and integration.
-            </p>
+            <p>Lighting design, performance and integration.</p>
           </div>
 
           <div class="service-card">
             <h3>Sustainability</h3>
-            <p>
-              Energy efficiency, environmental considerations and
-              sustainable building performance.
-            </p>
+            <p>Energy efficiency and sustainable building performance.</p>
           </div>
 
           <div class="service-card">
             <h3>Integrated Engineering</h3>
-            <p>
-              Coordinating building services to support effective
-              project integration.
-            </p>
+            <p>Coordinated building services and project integration.</p>
           </div>
 
         </div>
-
       </div>
     </section>
 
@@ -679,8 +644,7 @@
         <h2>Have a project in mind?</h2>
 
         <p>
-          Get in touch by email to discuss your engineering requirements
-          and the next steps for your enquiry.
+          Contact our team to discuss your engineering requirements.
         </p>
 
         <a
@@ -716,9 +680,9 @@
   </footer>
 
   <script>
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
-</script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 
 </body>
-  </html>
+</html>
