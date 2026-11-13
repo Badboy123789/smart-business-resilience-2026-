@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +9,18 @@
 
 <meta name="description" content="Explore Smart Business Resilience's approach to sustainable engineering, energy efficiency, lighting and building performance.">
 
-<meta name="theme-color" content="#080808">
+<meta name="theme-color" content="#07130F">
 
 <style>
 :root {
-  --black: #080808;
-  --dark: #101014;
-  --pink: #ff1688;
-  --white: #ffffff;
-  --muted: #c2c2cc;
-  --border: rgba(255,255,255,.12);
+  --black: #07130F;
+  --dark: #0D2118;
+  --pink: #10B981;
+  --white: #FFFFFF;
+  --muted: #B7C9C0;
+  --border: rgba(110,231,183,.15);
   --container: 1180px;
+  --mint: #6EE7B7;
 }
 
 * {
@@ -51,12 +53,12 @@ a {
 }
 
 .pink {
-  color: var(--pink);
+  color: var(--mint);
 }
 
 .eyebrow {
   display: inline-block;
-  color: var(--pink);
+  color: var(--mint);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 3px;
@@ -91,16 +93,16 @@ section {
   padding: 14px 23px;
   border-radius: 6px;
   border: 1px solid var(--pink);
-  background: var(--pink);
+  background: linear-gradient(135deg, #10B981, #059669);
   color: white;
   font-size: 14px;
   font-weight: 700;
-  transition: .25s ease;
+  transition: .3s ease;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(255,22,136,.2);
+  box-shadow: 0 10px 30px rgba(16,185,129,.22);
 }
 
 /* HEADER */
@@ -109,7 +111,7 @@ section {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(8,8,8,.96);
+  background: rgba(7,19,15,.96);
   backdrop-filter: blur(15px);
   border-bottom: 1px solid var(--border);
 }
@@ -138,6 +140,9 @@ section {
   place-items: center;
   font-size: 14px;
   font-weight: 900;
+  color: var(--mint);
+  background: rgba(16,185,129,.08);
+  box-shadow: 0 0 18px rgba(16,185,129,.08);
 }
 
 .brand-name {
@@ -149,7 +154,7 @@ section {
 
 .brand-name span {
   display: block;
-  color: var(--pink);
+  color: var(--mint);
   letter-spacing: 3px;
 }
 
@@ -162,13 +167,13 @@ section {
 .nav-links a {
   font-size: 12px;
   font-weight: 600;
-  color: #e5e5eb;
+  color: #D5E5DC;
   transition: color .2s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--pink);
+  color: var(--mint);
 }
 
 .menu-toggle {
@@ -187,12 +192,16 @@ section {
 .page-hero {
   padding: 110px 0;
   background:
-    radial-gradient(ellipse at 90% 20%, rgba(255,22,136,.17), transparent 40%),
-    linear-gradient(120deg, #080808, #111119, #080808);
+    radial-gradient(ellipse at 90% 20%, rgba(16,185,129,.19), transparent 40%),
+    radial-gradient(ellipse at 10% 90%, rgba(110,231,183,.07), transparent 40%),
+    linear-gradient(120deg, #07130F, #0D2118, #07130F);
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-content {
   max-width: 820px;
+  animation: enter .8s ease both;
 }
 
 .page-hero h1 {
@@ -203,7 +212,10 @@ section {
 
 .page-hero h1 span {
   display: block;
-  color: var(--pink);
+  background: linear-gradient(90deg, #10B981, #6EE7B7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .page-hero p {
@@ -241,8 +253,14 @@ section {
   border: 1px solid var(--border);
   border-radius: 12px;
   background:
-    radial-gradient(circle at top right, rgba(255,22,136,.12), transparent 45%),
-    var(--dark);
+    radial-gradient(circle at top right, rgba(16,185,129,.14), transparent 45%),
+    linear-gradient(145deg, #10251B, #0D2118);
+  transition: .3s ease;
+}
+
+.intro-panel:hover {
+  border-color: rgba(110,231,183,.4);
+  box-shadow: 0 15px 35px rgba(0,0,0,.2);
 }
 
 .intro-panel h3 {
@@ -266,12 +284,15 @@ section {
 .panel-point strong {
   display: block;
   margin-bottom: 5px;
+  color: var(--mint);
 }
 
 /* SUSTAINABILITY CARDS */
 
 .sustainability-section {
-  background: #0c0c10;
+  background:
+    radial-gradient(ellipse at 90% 10%, rgba(16,185,129,.06), transparent 45%),
+    #091A13;
 }
 
 .sustainability-grid {
@@ -282,7 +303,9 @@ section {
 
 .sustainability-card {
   padding: 30px;
-  background: var(--dark);
+  background:
+    radial-gradient(circle at top right, rgba(16,185,129,.10), transparent 45%),
+    linear-gradient(145deg, #10251B, #0D2118);
   border: 1px solid var(--border);
   border-radius: 12px;
   transition: .3s ease;
@@ -290,11 +313,12 @@ section {
 
 .sustainability-card:hover {
   transform: translateY(-5px);
-  border-color: var(--pink);
+  border-color: rgba(110,231,183,.5);
+  box-shadow: 0 15px 35px rgba(0,0,0,.22);
 }
 
 .card-number {
-  color: var(--pink);
+  color: var(--mint);
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 2px;
@@ -322,12 +346,20 @@ section {
   padding: 28px;
   border: 1px solid var(--border);
   border-radius: 10px;
-  background: var(--dark);
+  background: linear-gradient(145deg, #10251B, #0D2118);
+  transition: .3s ease;
+}
+
+.energy-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(110,231,183,.4);
+  box-shadow: 0 12px 28px rgba(0,0,0,.2);
 }
 
 .energy-card h3 {
   font-size: 20px;
   margin-bottom: 12px;
+  color: var(--mint);
 }
 
 .energy-card p {
@@ -337,7 +369,9 @@ section {
 /* THINKING LONG TERM */
 
 .long-term {
-  background: #0c0c10;
+  background:
+    radial-gradient(ellipse at 10% 50%, rgba(16,185,129,.07), transparent 45%),
+    #091A13;
 }
 
 .long-term-grid {
@@ -353,18 +387,26 @@ section {
 
 .long-term-list {
   list-style: none;
+  padding: 25px;
+  background: linear-gradient(145deg, #10251B, #0D2118);
+  border: 1px solid var(--border);
+  border-radius: 12px;
 }
 
 .long-term-list li {
   padding: 15px 0;
   border-bottom: 1px solid var(--border);
-  color: #e8e8ed;
+  color: #D5E5DC;
   font-size: 14px;
+}
+
+.long-term-list li:last-child {
+  border-bottom: none;
 }
 
 .long-term-list li::before {
   content: "✓";
-  color: var(--pink);
+  color: var(--mint);
   font-weight: 900;
   margin-right: 12px;
 }
@@ -381,12 +423,19 @@ section {
   padding: 25px;
   border: 1px solid var(--border);
   border-radius: 10px;
-  background: var(--dark);
+  background: linear-gradient(145deg, #10251B, #0D2118);
+  transition: .3s ease;
+}
+
+.approach-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(110,231,183,.4);
 }
 
 .approach-card h3 {
   font-size: 19px;
   margin-bottom: 12px;
+  color: var(--mint);
 }
 
 .approach-card p {
@@ -399,8 +448,8 @@ section {
   text-align: center;
   padding: 90px 0;
   background:
-    radial-gradient(ellipse at center, rgba(255,22,136,.13), transparent 65%),
-    var(--black);
+    radial-gradient(ellipse at center, rgba(16,185,129,.16), transparent 65%),
+    linear-gradient(120deg, #07130F, #0D2118, #07130F);
 }
 
 .cta-content {
@@ -416,7 +465,7 @@ section {
 
 .footer {
   padding: 55px 0 25px;
-  background: #050505;
+  background: #050E0A;
 }
 
 .footer-grid {
@@ -437,8 +486,12 @@ section {
   color: var(--muted);
 }
 
+.footer a {
+  transition: color .2s ease;
+}
+
 .footer a:hover {
-  color: var(--pink);
+  color: var(--mint);
 }
 
 .footer-links {
@@ -451,7 +504,21 @@ section {
   padding-top: 22px;
   text-align: center;
   font-size: 12px;
-  color: #92929c;
+  color: #929F97;
+}
+
+/* ANIMATIONS */
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* MOBILE RESPONSIVENESS */
@@ -487,7 +554,7 @@ section {
     left: 0;
     right: 0;
     padding: 20px 5%;
-    background: #080808;
+    background: #07130F;
     border-bottom: 1px solid var(--border);
     flex-direction: column;
     align-items: flex-start;
@@ -521,6 +588,14 @@ section {
 
   .page-hero h1 {
     letter-spacing: -1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
   }
 }
 </style>
@@ -976,4 +1051,4 @@ document.getElementById("year").textContent =
 </script>
 
 </body>
-        </html>
+</html>
