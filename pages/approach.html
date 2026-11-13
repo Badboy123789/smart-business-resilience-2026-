@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +9,18 @@
 
   <meta name="description" content="Discover Smart Business Resilience's engineering-focused approach to functionality, coordination and sustainable building performance.">
 
-  <meta name="theme-color" content="#080808">
+  <meta name="theme-color" content="#07130F">
 
   <style>
     :root {
-      --black: #080808;
-      --dark: #101014;
-      --pink: #ff1688;
+      --black: #07130F;
+      --dark: #0D2118;
+      --pink: #10B981;
       --white: #ffffff;
-      --muted: #c2c2cc;
-      --border: rgba(255,255,255,0.12);
+      --muted: #B7C9C0;
+      --border: rgba(110,231,183,0.15);
       --container: 1180px;
+      --mint: #6EE7B7;
     }
 
     * {
@@ -51,12 +53,12 @@
     }
 
     .pink {
-      color: var(--pink);
+      color: var(--mint);
     }
 
     .eyebrow {
       display: inline-block;
-      color: var(--pink);
+      color: var(--mint);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 3px;
@@ -92,15 +94,15 @@
       border-radius: 6px;
       border: 1px solid var(--pink);
       background: var(--pink);
-      color: white;
+      color: #FFFFFF;
       font-size: 14px;
       font-weight: 700;
-      transition: .25s ease;
+      transition: all .35s ease;
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(255,22,136,.2);
+      box-shadow: 0 10px 30px rgba(16,185,129,.25);
     }
 
     /* HEADER */
@@ -109,7 +111,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(8,8,8,.96);
+      background: rgba(7,19,15,.94);
       backdrop-filter: blur(15px);
       border-bottom: 1px solid var(--border);
     }
@@ -162,7 +164,7 @@
     .nav-links a {
       font-size: 12px;
       font-weight: 600;
-      color: #e5e5eb;
+      color: #E0EDE6;
       transition: color .2s;
     }
 
@@ -175,7 +177,7 @@
       display: none;
       background: transparent;
       border: 1px solid var(--border);
-      color: white;
+      color: #FFFFFF;
       border-radius: 6px;
       padding: 7px 12px;
       font-size: 22px;
@@ -187,8 +189,8 @@
     .page-hero {
       padding: 110px 0;
       background:
-        radial-gradient(ellipse at 90% 20%, rgba(255,22,136,.16), transparent 40%),
-        linear-gradient(120deg, #080808, #111119, #080808);
+        radial-gradient(ellipse at 90% 20%, rgba(16,185,129,.20), transparent 40%),
+        linear-gradient(120deg, #07130F, #102D20, #07130F);
       position: relative;
       overflow: hidden;
     }
@@ -197,6 +199,7 @@
       max-width: 820px;
       position: relative;
       z-index: 1;
+      animation: enter 1s ease both;
     }
 
     .page-hero h1 {
@@ -238,16 +241,17 @@
     .approach-card {
       padding: 30px;
       background:
-        radial-gradient(circle at 100% 0%, rgba(255,22,136,.09), transparent 45%),
-        #101014;
+        radial-gradient(circle at 100% 0%, rgba(16,185,129,.12), transparent 45%),
+        #10271B;
       border: 1px solid var(--border);
       border-radius: 12px;
-      transition: .3s ease;
+      transition: all .4s ease;
     }
 
     .approach-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--pink);
+      transform: translateY(-7px);
+      border-color: var(--mint);
+      box-shadow: 0 15px 35px rgba(16,185,129,.09);
     }
 
     .number {
@@ -270,7 +274,7 @@
     /* OUR PRINCIPLES */
 
     .principles-section {
-      background: #0c0c10;
+      background: #0A1B13;
     }
 
     .principles-grid {
@@ -283,7 +287,14 @@
       padding: 30px;
       border: 1px solid var(--border);
       border-radius: 10px;
-      background: #101014;
+      background: linear-gradient(145deg, #10271B, #0B1A12);
+      transition: all .35s ease;
+    }
+
+    .principle:hover {
+      transform: translateY(-6px);
+      border-color: var(--mint);
+      box-shadow: 0 12px 28px rgba(16,185,129,.08);
     }
 
     .principle h3 {
@@ -295,7 +306,7 @@
       font-size: 14px;
     }
 
-        /* APPROACH DETAILS */
+    /* APPROACH DETAILS */
 
     .details-grid {
       display: grid;
@@ -320,7 +331,7 @@
     .details-list li {
       padding: 12px 0;
       border-bottom: 1px solid var(--border);
-      color: #e8e8ed;
+      color: #E5F2EA;
       font-size: 14px;
     }
 
@@ -336,8 +347,14 @@
       border: 1px solid var(--border);
       border-radius: 14px;
       background:
-        radial-gradient(circle at top right, rgba(255,22,136,.13), transparent 45%),
-        #101014;
+        radial-gradient(circle at top right, rgba(16,185,129,.16), transparent 45%),
+        linear-gradient(145deg, #10271B, #0B1A12);
+      transition: all .4s ease;
+    }
+
+    .details-panel:hover {
+      transform: translateY(-4px);
+      border-color: rgba(110,231,183,.4);
     }
 
     .details-panel h3 {
@@ -357,7 +374,7 @@
     .detail-item strong {
       display: block;
       margin-bottom: 6px;
-      color: white;
+      color: #FFFFFF;
     }
 
     .detail-item p {
@@ -367,7 +384,7 @@
     /* WORKING TOGETHER */
 
     .working-section {
-      background: #0c0c10;
+      background: #0A1B13;
     }
 
     .working-grid {
@@ -378,9 +395,16 @@
 
     .working-card {
       padding: 28px;
-      background: #101014;
+      background: linear-gradient(145deg, #10271B, #0B1A12);
       border: 1px solid var(--border);
       border-radius: 10px;
+      transition: all .35s ease;
+    }
+
+    .working-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--mint);
+      box-shadow: 0 12px 28px rgba(16,185,129,.08);
     }
 
     .working-card .number {
@@ -402,8 +426,8 @@
       padding: 90px 0;
       text-align: center;
       background:
-        radial-gradient(ellipse at center, rgba(255,22,136,.13), transparent 65%),
-        #080808;
+        radial-gradient(ellipse at center, rgba(110,231,183,.18), transparent 65%),
+        linear-gradient(120deg, #07130F, #123D29, #07130F);
     }
 
     .cta-content {
@@ -423,7 +447,7 @@
 
     .footer {
       padding: 55px 0 25px;
-      background: #050505;
+      background: #050F0A;
     }
 
     .footer-grid {
@@ -458,7 +482,39 @@
       padding-top: 22px;
       text-align: center;
       font-size: 12px;
-      color: #92929c;
+      color: #9CB5A7;
+    }
+
+    /* ANIMATIONS */
+
+    .section-heading,
+    .approach-card,
+    .principle,
+    .details-content,
+    .details-panel,
+    .working-card,
+    .cta-content {
+      animation: enter .8s ease both;
+    }
+
+    @keyframes enter {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
     }
 
     /* RESPONSIVE DESIGN */
@@ -498,7 +554,7 @@
         left: 0;
         right: 0;
         padding: 20px 5%;
-        background: #080808;
+        background: rgba(7,19,15,.98);
         border-bottom: 1px solid var(--border);
         flex-direction: column;
         align-items: flex-start;
@@ -586,13 +642,11 @@
 
         <h1>
           An Engineering Approach
-          <span>Built Around Performance.</span>
+          <span>Built for Performance.</span>
         </h1>
 
         <p>
-          At Smart Business Resilience, our approach focuses on understanding
-          project requirements, coordinating engineering disciplines and
-          considering how buildings perform throughout their lifecycle.
+          We understand project needs, coordinate engineering disciplines and consider long-term building performance.
         </p>
 
         <a href="contact.html" class="btn">Discuss Your Requirements →</a>
@@ -609,12 +663,10 @@
       <div class="section-heading">
         <span class="eyebrow">Our Method</span>
 
-        <h2>A Clear and Considered Way of Working</h2>
+        <h2>A Clear, Considered Approach</h2>
 
         <p>
-          Good engineering begins with understanding the brief. A structured
-          approach helps identify priorities, improve coordination and keep
-          attention on the practical requirements of each project.
+          We start with the brief, identify priorities and focus on practical project requirements.
         </p>
       </div>
 
@@ -624,9 +676,7 @@
           <div class="number">01 / UNDERSTAND</div>
           <h3>Understand the Brief</h3>
           <p>
-            We begin by understanding the project objectives, building
-            requirements, constraints and the needs of the people who will
-            use the space.
+            We identify project goals, constraints and the needs of building users.
           </p>
         </article>
 
@@ -634,9 +684,7 @@
           <div class="number">02 / COORDINATE</div>
           <h3>Coordinate the Disciplines</h3>
           <p>
-            Electrical, mechanical, public health, lighting and sustainability
-            considerations need to work together as part of the wider building
-            design.
+            We consider how electrical, mechanical, public health, lighting and sustainability systems work together.
           </p>
         </article>
 
@@ -644,8 +692,7 @@
           <div class="number">03 / CONSIDER</div>
           <h3>Consider the Whole Lifecycle</h3>
           <p>
-            Engineering decisions should consider usability, efficiency,
-            maintenance and the long-term performance of building systems.
+            We consider usability, efficiency, maintenance and long-term performance.
           </p>
         </article>
 
@@ -653,9 +700,7 @@
           <div class="number">04 / REVIEW</div>
           <h3>Review the Requirements</h3>
           <p>
-            Requirements and design information should be reviewed carefully
-            to help identify coordination issues and clarify outstanding
-            questions.
+            We review design information to identify coordination issues and clarify requirements.
           </p>
         </article>
 
@@ -663,9 +708,7 @@
           <div class="number">05 / REFINE</div>
           <h3>Refine the Design</h3>
           <p>
-            Where necessary, design considerations can be refined to respond
-            to project priorities, practical constraints and relevant
-            performance objectives.
+            We refine design considerations around project priorities and practical constraints.
           </p>
         </article>
 
@@ -673,8 +716,7 @@
           <div class="number">06 / SUPPORT</div>
           <h3>Support Project Objectives</h3>
           <p>
-            The aim is to support coordinated engineering solutions that
-            respond to the brief and the intended use of the building.
+            We support coordinated solutions that meet the brief and intended building use.
           </p>
         </article>
 
@@ -693,8 +735,7 @@
         <h2>What Guides Our Approach</h2>
 
         <p>
-          These principles describe the considerations that inform a
-          thoughtful, engineering-focused approach to building design.
+          These principles guide our engineering decisions and building design considerations.
         </p>
       </div>
 
@@ -703,32 +744,28 @@
         <article class="principle">
           <h3>Functionality First</h3>
           <p>
-            Building systems should respond to the practical needs of the
-            space, its users and the activities taking place within it.
+            Building systems should meet the needs of the space and its users.
           </p>
         </article>
 
         <article class="principle">
           <h3>Coordination</h3>
           <p>
-            Considering the relationship between engineering disciplines
-            helps support a more coherent overall building design.
+            Coordinated disciplines support a more cohesive building design.
           </p>
         </article>
 
         <article class="principle">
           <h3>Efficiency</h3>
           <p>
-            Energy use, system performance and operational requirements are
-            important considerations when evaluating engineering solutions.
+            We consider energy use, system performance and operational needs.
           </p>
         </article>
 
         <article class="principle">
           <h3>Long-Term Thinking</h3>
           <p>
-            Maintainability, adaptability and lifecycle performance should
-            be considered alongside immediate project requirements.
+            We consider maintenance, adaptability and lifecycle performance.
           </p>
         </article>
 
@@ -748,16 +785,11 @@
         <h2>Engineering Disciplines That Work Together</h2>
 
         <p>
-          Buildings depend on interconnected systems. Electrical and
-          mechanical installations, public health services, lighting and
-          sustainability considerations can all influence the overall
-          design.
+          Buildings rely on connected systems, from electrical and mechanical services to lighting and sustainability.
         </p>
 
         <p>
-          Considering these relationships early can help teams identify
-          dependencies and make informed decisions as project requirements
-          develop.
+          Early coordination helps identify dependencies and inform project decisions.
         </p>
 
         <ul class="details-list">
@@ -778,32 +810,28 @@
         <div class="detail-item">
           <strong>People and Usability</strong>
           <p>
-            Consider how building systems support comfort, safety and the
-            day-to-day needs of occupants.
+            Support occupant comfort, safety and everyday needs.
           </p>
         </div>
 
         <div class="detail-item">
           <strong>Building Performance</strong>
           <p>
-            Consider how systems contribute to energy use, functionality
-            and operational performance.
+            Understand how systems affect energy use and building performance.
           </p>
         </div>
 
         <div class="detail-item">
           <strong>Practical Coordination</strong>
           <p>
-            Recognise interfaces between systems and the importance of
-            clear project information.
+            Identify system interfaces and keep project information clear.
           </p>
         </div>
 
         <div class="detail-item">
           <strong>Future Considerations</strong>
           <p>
-            Take account of maintainability, adaptability and longer-term
-            building needs.
+            Plan for maintenance, adaptability and future needs.
           </p>
         </div>
 
@@ -820,12 +848,10 @@
       <div class="section-heading">
         <span class="eyebrow">Collaboration</span>
 
-        <h2>Working Towards the Same Objective</h2>
+        <h2>Working Towards Shared Goals</h2>
 
         <p>
-          Successful engineering design depends on clear communication,
-          shared project information and a common understanding of
-          requirements.
+          Good engineering relies on clear communication, shared information and agreed requirements.
         </p>
       </div>
 
@@ -835,8 +861,7 @@
           <div class="number">01</div>
           <h3>Clear Communication</h3>
           <p>
-            Keeping requirements and design considerations clear helps
-            project stakeholders understand priorities and dependencies.
+            Clear information helps stakeholders understand priorities and dependencies.
           </p>
         </article>
 
@@ -844,8 +869,7 @@
           <div class="number">02</div>
           <h3>Joined-Up Thinking</h3>
           <p>
-            Considering the interfaces between disciplines helps support
-            a coordinated approach to building services.
+            Connecting disciplines supports coordinated building services.
           </p>
         </article>
 
@@ -853,8 +877,7 @@
           <div class="number">03</div>
           <h3>Purposeful Decisions</h3>
           <p>
-            Engineering decisions should be informed by the brief, practical
-            constraints and the intended performance of the building.
+            Decisions should reflect the brief, practical constraints and intended performance.
           </p>
         </article>
 
@@ -873,8 +896,7 @@
       <h2>Have an Engineering Project in Mind?</h2>
 
       <p>
-        Get in touch with Smart Business Resilience to discuss your
-        project requirements and the engineering considerations involved.
+        Contact Smart Business Resilience to discuss your project and engineering needs.
       </p>
 
       <a href="contact.html" class="btn">Contact Our Team →</a>
@@ -899,8 +921,7 @@
           </a>
 
           <p style="margin-top:18px; max-width:330px;">
-            An engineering-focused approach to building services,
-            coordination and sustainable building performance.
+            Engineering expertise, coordinated building services and sustainable performance.
           </p>
         </div>
 
