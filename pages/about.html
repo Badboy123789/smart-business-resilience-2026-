@@ -1,24 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>About Us | Smart Business Resilience</title>
-
-  <meta name="description" content="Learn about Smart Business Resilience, our engineering-focused approach, values and commitment to practical, sustainable engineering solutions.">
-
-  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Learn about Smart Business Resilience, our engineering expertise, values and sustainable approach.">
+  <meta name="theme-color" content="#071A12">
 
   <style>
     :root {
-      --black: #080808;
-      --dark: #171717;
-      --pink: #c4c4c4;
-      --white: #ffffff;
-      --muted: #bdbdbd;
-      --border: rgba(255,255,255,0.12);
+      --black: #07130F;
+      --dark: #0D2118;
+      --pink: #10B981;
+      --white: #FFFFFF;
+      --muted: #B7C9C0;
+      --border: rgba(110,231,183,0.15);
       --container: 1180px;
+      --mint: #6EE7B7;
     }
 
     * {
@@ -55,12 +54,12 @@
     }
 
     .pink {
-      color: var(--pink);
+      color: var(--mint);
     }
 
     .eyebrow {
       display: inline-block;
-      color: var(--pink);
+      color: var(--mint);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 3px;
@@ -96,15 +95,17 @@
       border-radius: 6px;
       border: 1px solid var(--pink);
       background: var(--pink);
-      color: #080808;
+      color: #06140E;
       font-size: 14px;
       font-weight: 700;
-      transition: .25s ease;
+      transition: all .35s ease;
     }
 
     .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(190,190,190,.15);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(16,185,129,.25);
+      background: var(--mint);
+      border-color: var(--mint);
     }
 
     .btn-outline {
@@ -114,7 +115,7 @@
 
     .btn-outline:hover {
       background: var(--pink);
-      color: #080808;
+      color: #06140E;
     }
 
     /* HEADER */
@@ -123,8 +124,8 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(8,8,8,.96);
-      backdrop-filter: blur(15px);
+      background: rgba(7,19,15,.94);
+      backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--border);
     }
 
@@ -152,7 +153,14 @@
       place-items: center;
       font-size: 14px;
       font-weight: 900;
-      box-shadow: 0 0 20px rgba(190,190,190,.10);
+      color: var(--mint);
+      box-shadow: 0 0 22px rgba(16,185,129,.16);
+      transition: .35s ease;
+    }
+
+    .brand:hover .brand-mark {
+      transform: rotate(-5deg) scale(1.05);
+      box-shadow: 0 0 28px rgba(16,185,129,.3);
     }
 
     .brand-name {
@@ -164,7 +172,7 @@
 
     .brand-name span {
       display: block;
-      color: var(--pink);
+      color: var(--mint);
       letter-spacing: 3px;
     }
 
@@ -177,13 +185,13 @@
     .nav-links a {
       font-size: 13px;
       font-weight: 600;
-      color: #e5e5eb;
-      transition: color .2s;
+      color: #E0EDE6;
+      transition: color .25s ease;
     }
 
     .nav-links a:hover,
     .nav-links a.active {
-      color: var(--pink);
+      color: var(--mint);
     }
 
     .menu-toggle {
@@ -195,6 +203,7 @@
       padding: 7px 12px;
       font-size: 22px;
       cursor: pointer;
+      transition: .3s ease;
     }
 
     /* PAGE HERO */
@@ -202,8 +211,9 @@
     .page-hero {
       padding: 110px 0;
       background:
-        radial-gradient(ellipse at 90% 20%, rgba(190,190,190,.12), transparent 40%),
-        linear-gradient(120deg, #080808, #202020, #080808);
+        radial-gradient(ellipse at 90% 20%, rgba(16,185,129,.20), transparent 42%),
+        radial-gradient(ellipse at 10% 90%, rgba(5,150,105,.12), transparent 40%),
+        linear-gradient(120deg, #07130F, #102D20, #07130F);
       position: relative;
       overflow: hidden;
     }
@@ -216,7 +226,7 @@
       font-size: clamp(150px, 25vw, 300px);
       font-weight: 900;
       line-height: 1;
-      color: rgba(190,190,190,.035);
+      color: rgba(110,231,183,.045);
       pointer-events: none;
     }
 
@@ -224,7 +234,7 @@
       max-width: 790px;
       position: relative;
       z-index: 1;
-      animation: enter .8s ease both;
+      animation: enter 1s ease both;
     }
 
     .page-hero h1 {
@@ -235,7 +245,7 @@
 
     .page-hero h1 span {
       display: block;
-      color: var(--pink);
+      color: var(--mint);
     }
 
     .page-hero p {
@@ -260,12 +270,19 @@
     .intro-panel {
       padding: 35px;
       background:
-        radial-gradient(circle at 100% 0%, rgba(190,190,190,.10), transparent 45%),
-        #171717;
+        radial-gradient(circle at 100% 0%, rgba(16,185,129,.16), transparent 45%),
+        linear-gradient(145deg, #10291D, #0A1912);
       border: 1px solid var(--border);
       border-radius: 13px;
       position: relative;
       overflow: hidden;
+      transition: .4s ease;
+    }
+
+    .intro-panel:hover {
+      border-color: rgba(110,231,183,.4);
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0,0,0,.2);
     }
 
     .intro-panel h3 {
@@ -286,19 +303,19 @@
       padding: 12px 0;
       border-bottom: 1px solid var(--border);
       font-size: 14px;
-      color: #ededed;
+      color: #E5F2EA;
     }
 
     .check-list li::before {
       content: "✦";
-      color: var(--pink);
+      color: var(--mint);
       margin-right: 12px;
     }
 
     /* MISSION AND VISION */
 
     .mission-section {
-      background: #101010;
+      background: #0A1B13;
     }
 
     .section-heading {
@@ -320,13 +337,14 @@
       padding: 35px;
       border: 1px solid var(--border);
       border-radius: 12px;
-      background: linear-gradient(145deg, #202020, #090909);
-      transition: .3s ease;
+      background: linear-gradient(145deg, #153525, #09170F);
+      transition: all .4s ease;
     }
 
     .mission-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-7px);
       border-color: var(--pink);
+      box-shadow: 0 15px 35px rgba(16,185,129,.09);
     }
 
     .card-icon {
@@ -334,12 +352,18 @@
       height: 50px;
       display: grid;
       place-items: center;
-      background: rgba(190,190,190,.08);
-      color: var(--pink);
-      border: 1px solid rgba(190,190,190,.30);
+      background: rgba(16,185,129,.12);
+      color: var(--mint);
+      border: 1px solid rgba(110,231,183,.3);
       border-radius: 10px;
       font-size: 23px;
       margin-bottom: 23px;
+      transition: .35s ease;
+    }
+
+    .mission-card:hover .card-icon {
+      transform: scale(1.08);
+      background: rgba(16,185,129,.2);
     }
 
     .mission-card h3 {
@@ -357,21 +381,22 @@
 
     .value-card {
       padding: 25px 20px;
-      background: #171717;
+      background: linear-gradient(145deg, #10271B, #0B1A12);
       border: 1px solid var(--border);
       border-radius: 10px;
-      transition: .3s ease;
+      transition: all .35s ease;
     }
 
     .value-card:hover {
       border-color: var(--pink);
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(16,185,129,.08);
     }
 
     .value-number {
       font-size: 13px;
       font-weight: 800;
-      color: var(--pink);
+      color: var(--mint);
       letter-spacing: 2px;
       margin-bottom: 20px;
     }
@@ -395,9 +420,17 @@
 
     .discipline-card {
       padding: 25px;
-      background: #171717;
-      border-left: 2px solid var(--pink);
+      background: linear-gradient(145deg, #10271B, #0B1A12);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--pink);
       border-radius: 0 9px 9px 0;
+      transition: all .35s ease;
+    }
+
+    .discipline-card:hover {
+      transform: translateX(5px);
+      background: linear-gradient(145deg, #163A28, #0B1A12);
+      border-color: var(--mint);
     }
 
     .discipline-card h3 {
@@ -412,7 +445,9 @@
     /* CTA */
 
     .contact-cta {
-      background: linear-gradient(110deg, #171717, #414141, #171717);
+      background:
+        radial-gradient(ellipse at 90% 50%, rgba(110,231,183,.18), transparent 45%),
+        linear-gradient(110deg, #102B1E, #145C3B, #0C2418);
       padding: 70px 0;
       border: none;
     }
@@ -430,7 +465,7 @@
     }
 
     .cta-inner p {
-      color: white;
+      color: #E0F2E8;
       max-width: 650px;
     }
 
@@ -441,11 +476,16 @@
       flex-shrink: 0;
     }
 
+    .cta-inner .btn:hover {
+      background: var(--mint);
+      color: #06140E;
+    }
+
     /* FOOTER */
 
     .footer {
       padding: 60px 0 25px;
-      background: #050505;
+      background: #050F0A;
     }
 
     .footer-grid {
@@ -476,8 +516,12 @@
       color: var(--muted);
     }
 
+    .footer-links a {
+      transition: color .25s ease;
+    }
+
     .footer-links a:hover {
-      color: var(--pink);
+      color: var(--mint);
     }
 
     .footer-bottom {
@@ -499,7 +543,7 @@
     @keyframes enter {
       from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(22px);
       }
       to {
         opacity: 1;
@@ -556,6 +600,7 @@
 
       .nav-links.open {
         display: flex;
+        animation: enter .3s ease both;
       }
 
       .nav-links a {
@@ -615,6 +660,7 @@
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
       }
     }
   </style>
@@ -655,7 +701,6 @@
     </div>
   </header>
 
-
   <main>
 
     <!-- PAGE HERO -->
@@ -670,9 +715,8 @@
         </h1>
 
         <p>
-          An engineering-focused company bringing together technical
-          disciplines, practical thinking and sustainability considerations
-          to support better-performing built environments.
+          Engineering expertise, practical thinking and sustainable
+          solutions for better-performing built environments.
         </p>
 
         <a href="services.html" class="btn">
@@ -682,12 +726,12 @@
       </div>
     </section>
 
-
     <!-- WHO WE ARE -->
     <section>
       <div class="container intro-grid">
 
         <div class="intro-copy reveal">
+
           <span class="eyebrow">WHO WE ARE</span>
 
           <h2>
@@ -697,29 +741,27 @@
 
           <p>
             Smart Business Resilience (SBR) focuses on engineering
-            disciplines that contribute to the effective operation
-            and performance of buildings and their systems.
+            solutions that improve building systems and performance.
           </p>
 
           <p>
-            Our areas of focus include electrical engineering,
-            mechanical engineering, public health engineering,
-            lighting and sustainability.
+            Our expertise spans electrical, mechanical, public health,
+            lighting and sustainability disciplines.
           </p>
 
           <p>
-            We recognise that successful engineering requires
-            thoughtful consideration of technical requirements,
-            coordination between systems and the needs of the people
-            who use the built environment.
+            We bring technical knowledge and coordinated thinking
+            to create functional, efficient built environments.
           </p>
 
           <a href="services.html" class="btn btn-outline">
             View Our Engineering Services →
           </a>
+
         </div>
 
         <div class="intro-panel reveal">
+
           <span class="eyebrow">OUR FOCUS</span>
 
           <h3>
@@ -728,9 +770,8 @@
           </h3>
 
           <p>
-            We take an engineering-focused perspective that considers
-            how systems work, how disciplines interact and how decisions
-            may influence long-term building performance.
+            We consider how engineering systems work together
+            and contribute to long-term building performance.
           </p>
 
           <ul class="check-list">
@@ -740,17 +781,17 @@
             <li>Lighting considerations</li>
             <li>Sustainability principles</li>
           </ul>
-        </div>
 
+        </div>
       </div>
     </section>
-
 
     <!-- MISSION AND VISION -->
     <section class="mission-section">
       <div class="container">
 
         <div class="section-heading reveal">
+
           <span class="eyebrow">OUR DIRECTION</span>
 
           <h2>
@@ -759,10 +800,10 @@
           </h2>
 
           <p>
-            Our engineering-focused perspective is guided by the
-            importance of functionality, coordination and responsible
-            thinking about the built environment.
+            Guided by functionality, engineering coordination
+            and responsible thinking about the built environment.
           </p>
+
         </div>
 
         <div class="mission-grid">
@@ -774,9 +815,8 @@
 
             <p>
               To approach engineering challenges with practical,
-              considered thinking across building-services disciplines,
-              with attention to functionality, coordination and
-              responsible use of resources.
+              coordinated solutions that prioritise functionality
+              and responsible resource use.
             </p>
           </article>
 
@@ -786,24 +826,22 @@
             <h3>Our Vision</h3>
 
             <p>
-              To contribute to built environments that are better
-              considered, more efficient and resilient, where engineering
-              systems support the needs of people and the long-term
-              performance of buildings.
+              To support efficient, resilient built environments
+              through engineering systems designed for people
+              and long-term performance.
             </p>
           </article>
 
         </div>
-
       </div>
     </section>
-
 
     <!-- CORE VALUES -->
     <section>
       <div class="container">
 
         <div class="section-heading reveal">
+
           <span class="eyebrow">WHAT GUIDES US</span>
 
           <h2>
@@ -811,9 +849,10 @@
           </h2>
 
           <p>
-            The principles behind our engineering-focused perspective
-            and the way we consider the built environment.
+            The principles that guide our engineering approach
+            and decisions.
           </p>
+
         </div>
 
         <div class="values-grid">
@@ -822,8 +861,7 @@
             <div class="value-number">01</div>
             <h3>Technical Thinking</h3>
             <p>
-              Giving careful consideration to engineering requirements
-              and the purpose of each system.
+              Understanding engineering requirements and system performance.
             </p>
           </article>
 
@@ -831,8 +869,7 @@
             <div class="value-number">02</div>
             <h3>Practicality</h3>
             <p>
-              Considering real-world needs, functionality and
-              the people who use buildings.
+              Prioritising real-world needs and building functionality.
             </p>
           </article>
 
@@ -840,8 +877,7 @@
             <div class="value-number">03</div>
             <h3>Responsibility</h3>
             <p>
-              Recognising the importance of resource efficiency
-              and environmental considerations.
+              Supporting resource efficiency and environmental awareness.
             </p>
           </article>
 
@@ -849,22 +885,20 @@
             <div class="value-number">04</div>
             <h3>Coordination</h3>
             <p>
-              Considering how different engineering disciplines
-              interact and support one another.
+              Bringing engineering disciplines together effectively.
             </p>
           </article>
 
         </div>
-
       </div>
     </section>
-
 
     <!-- ENGINEERING DISCIPLINES -->
     <section class="mission-section">
       <div class="container">
 
         <div class="section-heading reveal">
+
           <span class="eyebrow">OUR AREAS OF FOCUS</span>
 
           <h2>
@@ -872,9 +906,10 @@
           </h2>
 
           <p>
-            Our areas of focus cover several connected disciplines
-            within building services and the wider built environment.
+            Connected engineering disciplines supporting
+            building services and the wider built environment.
           </p>
+
         </div>
 
         <div class="discipline-grid">
@@ -882,57 +917,48 @@
           <article class="discipline-card reveal">
             <h3>Electrical Engineering</h3>
             <p>
-              Electrical systems and the considerations that contribute
-              to dependable building operation.
+              Electrical systems that support dependable building operation.
             </p>
           </article>
 
           <article class="discipline-card reveal">
             <h3>Mechanical Engineering</h3>
             <p>
-              Mechanical building systems, ventilation, comfort
-              and operational performance.
+              Ventilation, comfort and mechanical system performance.
             </p>
           </article>
 
           <article class="discipline-card reveal">
             <h3>Public Health Engineering</h3>
             <p>
-              Water services, drainage and systems that support
-              healthy building environments.
+              Water, drainage and healthy building environments.
             </p>
           </article>
 
           <article class="discipline-card reveal">
             <h3>Lighting</h3>
             <p>
-              Lighting considerations for usability, visual comfort
-              and energy awareness.
+              Lighting for usability, comfort and energy awareness.
             </p>
           </article>
 
           <article class="discipline-card reveal">
             <h3>Sustainability</h3>
             <p>
-              Environmental considerations, resource efficiency
-              and long-term building performance.
+              Resource efficiency and long-term environmental performance.
             </p>
           </article>
 
           <article class="discipline-card reveal">
             <h3>Integrated Engineering</h3>
             <p>
-              Considering how building-services systems work
-              together to support building functionality
-              and performance.
+              Coordinating building systems for better overall performance.
             </p>
           </article>
 
         </div>
-
       </div>
     </section>
-
 
     <!-- CONTACT CTA -->
     <section class="contact-cta">
@@ -942,9 +968,8 @@
           <h2>Let's Talk Engineering.</h2>
 
           <p>
-            Contact Smart Business Resilience to discuss your
-            requirements and learn more about our engineering-focused
-            areas of focus.
+            Connect with Smart Business Resilience to discuss
+            your engineering requirements.
           </p>
         </div>
 
@@ -957,7 +982,6 @@
 
   </main>
 
-
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
@@ -965,6 +989,7 @@
       <div class="footer-grid">
 
         <div class="footer-about">
+
           <a href="../index.html" class="brand">
             <div class="brand-mark">SBR</div>
 
@@ -975,10 +1000,10 @@
           </a>
 
           <p>
-            An engineering-focused company bringing together
-            technical disciplines, practical thinking and
-            sustainability considerations for the built environment.
+            Engineering expertise, practical thinking and
+            sustainable solutions for the built environment.
           </p>
+
         </div>
 
         <div>
@@ -1020,17 +1045,17 @@
       </div>
 
       <div class="footer-bottom">
+
         <p>
           &copy; <span id="currentYear"></span>
           Smart Business Resilience. All rights reserved.
         </p>
 
         <p>Engineering with purpose.</p>
-      </div>
 
+      </div>
     </div>
   </footer>
-
 
   <!-- JAVASCRIPT -->
   <script>
@@ -1043,6 +1068,7 @@
       const isOpen = navLinks.classList.contains("open");
 
       menuToggle.setAttribute("aria-expanded", isOpen);
+
       menuToggle.setAttribute(
         "aria-label",
         isOpen ? "Close navigation menu" : "Open navigation menu"
@@ -1055,6 +1081,7 @@
       link.addEventListener("click", function () {
         navLinks.classList.remove("open");
         menuToggle.classList.remove("open");
+
         menuToggle.setAttribute("aria-expanded", "false");
         menuToggle.setAttribute("aria-label", "Open navigation menu");
         menuToggle.textContent = "☰";
